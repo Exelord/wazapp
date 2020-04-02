@@ -1,6 +1,9 @@
 {
   "version": "0.1.0",
+  "name": "wazup",
+  "author": "Maciej Kwaśniak",
   "license": "MIT",
+  "module": "dist/wazup.esm.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -17,9 +20,6 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build"
   },
-  "peerDependencies": {
-    "react": "^16.8.0"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -31,9 +31,13 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "wazup",
-  "author": "Maciej Kwaśniak",
-  "module": "dist/wazup.esm.js",
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "dependencies": {
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.1.8"
+  },
   "devDependencies": {
     "@types/jest": "^25.1.4",
     "@types/react": "^16.9.31",
@@ -42,9 +46,5 @@
     "tsdx": "^0.13.1",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
-  },
-  "dependencies": {
-    "mobx": "^5.15.4",
-    "mobx-react": "^6.1.8"
   }
 }
