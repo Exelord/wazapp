@@ -1,8 +1,10 @@
-import { Component, inject, tracked, action } from 'wazup';
+import { Component } from "react";
+import { component, service, tracked, action } from 'wazup';
 import AuthService from 'demo/services/auth';
 
+@component
 class UserProfile extends Component {
-  @inject(AuthService) auth;
+  @service(AuthService) auth;
 
   @tracked name;
 

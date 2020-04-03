@@ -1,6 +1,6 @@
-import { Store, tracked, action } from "wazup"
+import { Service, tracked, action } from "wazup"
 
-export default class AuthService extends Store {
+export default class AuthService extends Service {
   @tracked user;
 
   get isLoggedIn() {

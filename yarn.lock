@@ -7352,11 +7352,6 @@ mkdirp@0.x, mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "^1.2.5"
 
-mobx-react-lite@^1.4.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/mobx-react-lite/-/mobx-react-lite-1.5.2.tgz#c4395b0568b9cb16f07669d8869cc4efa1b8656d"
-  integrity sha512-PyZmARqqWtpuQaAoHF5pKX7h6TKNLwq6vtovm4zZvG6sEbMRHHSqioGXSeQbpRmG8Kw8uln3q/W1yMO5IfL5Sg==
-
 mobx-react@^5.1.8:
   version "5.4.4"
   resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.4.4.tgz#b3de9c6eabcd0ed8a40036888cb0221ab9568b80"
@@ -7364,13 +7359,6 @@ mobx-react@^5.1.8:
   dependencies:
     hoist-non-react-statics "^3.0.0"
     react-lifecycles-compat "^3.0.2"
-
-mobx-react@^6.1.8:
-  version "6.1.8"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-6.1.8.tgz#5b9a3950463d58c154dda2c94d16d48ed8fcb02e"
-  integrity sha512-NCMJn/hrWoeyeNbzCsBDtftWSy6VlFgw1VzhogrciPFvJIl2xs+8rJJdPlRHQTiNirwNoHNKJgUE4WhPZPvKDw==
-  dependencies:
-    mobx-react-lite "^1.4.2"
 
 mobx@^5.15.4:
   version "5.15.4"
@@ -10582,14 +10570,6 @@ watchpack@^1.6.0:
     chokidar "^2.1.8"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-
-wazup@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/wazup/-/wazup-0.2.0.tgz#8f2165001742507f41312df9c695eb55ae761445"
-  integrity sha512-cHCbiIO6UnEViqK5Wov2qgGvsBnadDi/FkVqteFBcEzHhAryBm/XKg5wzzHp6+vs+fT9Dg/xJhLSj0ng/lX3JA==
-  dependencies:
-    mobx "^5.15.4"
-    mobx-react "^6.1.8"
 
 wcwidth@^1.0.0, wcwidth@^1.0.1:
   version "1.0.1"

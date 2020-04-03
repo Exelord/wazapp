@@ -1,8 +1,10 @@
-import UserProfile from "demo/components/user-profile";
+// import UserProfile from "demo/components/user-profile";
+
+import TodoList from "demo/components/todo-list";
 
 const Page = () => {
   return (
-    <UserProfile />
+    <TodoList />
   )
 }
 
