@@ -1,12 +1,8 @@
+import { observer } from "mobx-react"
 import { Component as ReactComponent } from 'react';
-import { ContainerContext } from './app';
-import { autoTracking } from './tracking';
+import { ContainerContext } from './container';
 
-export default class Component extends ReactComponent {
-  static contextType = ContainerContext
-
-  constructor(props: {}, context?: any) {
-    super(props, context)
-    autoTracking(this.constructor as any)
-  }
-};
+export function component(target: typeof ReactComponent) {
+  target.contextType = ContainerContext;
+  observer(target)
+}

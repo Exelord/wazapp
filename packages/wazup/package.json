@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "name": "wazup",
   "author": "Maciej Kwaśniak",
   "license": "MIT",
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "mobx": "^5.15.4",
-    "mobx-react": "^6.1.8"
+    "mobx-react": "^5.1.8"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",

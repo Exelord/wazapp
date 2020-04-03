@@ -1,16 +1,15 @@
-import App, { inject, ContainerContext, Container } from './app'
-import Component from './component';
-import Store from './store';
-import { tracked, autoTracking, action } from './tracking';
+import App, { ContainerContext, Container } from './container'
+import { component } from './component';
+import Service, { service } from './service';
+import { tracked, action } from './tracking';
 
 export {
   App,
-  inject,
+  service,
   ContainerContext,
   Container,
-  Component,
-  Store,
+  Service,
   tracked,
-  autoTracking,
+  component,
   action
 }
