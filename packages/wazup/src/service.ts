@@ -1,21 +1,27 @@
-import { Container } from './container';
+import { Container, containerSymbol } from './container';
+
+function missingContainer(target: any) {
+  throw new Error(`Wazup: You need to wrap '${target.constructor.name}' with a 'component' or 'tracker' decorator in order to be able to inject services.`)
+}
 
 export default class Service {
-  protected context: Container;
+  protected [containerSymbol]: Container;
 
   constructor(container: Container) {
-    this.context = container;
+    this[containerSymbol] = container;
   }
 };
 
 export function service(storeClass: typeof Service) {
-  return function(_target: any, _name: string, descriptor: PropertyDescriptor) {
+  return function(target: any, _name: string, descriptor: PropertyDescriptor) {
     return {
       configurable: descriptor.configurable,
       enumerable: descriptor.enumerable,
 
       get(): any {
-        return ((this as any).context as Container).lookupService(storeClass)
+        const container = ((this as any)[containerSymbol] as Container);
+        if (!container) return missingContainer(target);
+        return container.lookupService(storeClass)
       }
     }
   }

@@ -1,15 +1,16 @@
 import App, { ContainerContext, Container } from './container'
 import { component } from './component';
 import Service, { service } from './service';
-import { tracked, action } from './tracking';
+import { tracked, action, tracker } from './tracking';
 
 export {
   App,
-  service,
-  ContainerContext,
   Container,
+  ContainerContext,
   Service,
-  tracked,
+  service,
   component,
+  tracked,
+  tracker,
   action
 }

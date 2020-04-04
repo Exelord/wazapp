@@ -3,16 +3,7 @@ import { createContext, useMemo } from 'react';
 import Service from './service';
 
 export const ContainerContext = createContext({});
-
-export default function App({ container, children }: { container?: Container, children: ReactChildren }) {
-  const appContainer = useMemo(() => container || new Container(), [container]);
-
-  return (
-    <ContainerContext.Provider value={appContainer}>
-      {children}
-    </ContainerContext.Provider>
-  )
-}
+export const containerSymbol = Symbol('container');
 
 export class Container {
   registry = new Map();
@@ -25,4 +16,14 @@ export class Container {
     this.registry.set(key, value);
     return value;
   }
+}
+
+export default function App({ container, children }: { container?: Container, children: ReactChildren }) {
+  const appContainer = useMemo(() => container || new Container(), [container]);
+
+  return (
+    <ContainerContext.Provider value={appContainer}>
+      {children}
+    </ContainerContext.Provider>
+  )
 }
