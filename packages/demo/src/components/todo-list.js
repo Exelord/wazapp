@@ -5,15 +5,19 @@ import TodosService from "demo/services/todos";
 
 @component
 export default class TodoList extends Component {
-  @service(TodosService) todos;
+  @service(TodosService) todoService;
 
   render() {
     return (
       <div>
-        <button onClick={this.todos.add}>Add</button>
-        {this.todos.todos.length} : {this.todos.done}
-        {this.todos.todos.map((todo, index) => (
-          <Todo key={index} todo={todo} />
+        <button onClick={this.todoService.add}>Add</button>
+        {this.todoService.todos.length} : {this.todoService.done}
+        {this.todoService.todos.map((todo, index) => (
+          <Todo key={index} todo={todo}>
+            {(done) => (
+              <span>{done ? "DONE" : "TODO"}</span>
+            )}
+          </Todo>
         ))}
       </div>
     );
