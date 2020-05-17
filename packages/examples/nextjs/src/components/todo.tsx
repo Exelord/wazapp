@@ -1,5 +1,5 @@
 import Component from "@wazapp/component";
-import { tracking } from '@wazapp/tracking';
+import { trackable } from '@wazapp/tracking';
 import { yieldChildren } from "@wazapp/helpers";
 
 export type Props = {
@@ -9,7 +9,7 @@ export type Props = {
   }
 }
 
-@tracking
+@trackable
 export default class Todo extends Component<Props> {
   render() {
     return (
