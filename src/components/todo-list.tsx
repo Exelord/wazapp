@@ -1,8 +1,8 @@
 import Todo from './todo';
 import TodosService from "@app/services/todos";
 
-import Component, { tracking } from "@wazup/component";
-import { service } from '@wazup/service';
+import Component, { tracking } from "@wazaap/component";
+import { service } from '@wazaap/service';
 
 @tracking
 export default class TodoList extends Component {

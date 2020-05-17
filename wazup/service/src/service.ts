@@ -1,4 +1,4 @@
-import { Container, setContainer } from '@wazup/core';
+import { Container, setContainer } from '@wazaap/core';
 
 export default class Service {
   constructor(container: Container) {

@@ -1,5 +1,5 @@
-import Service from "@wazup/service";
-import { tracked, action } from "@wazup/tracking";
+import Service from "@wazaap/service";
+import { tracked, action } from "@wazaap/tracking";
 
 export default class AuthService extends Service {
   @tracked user: any;

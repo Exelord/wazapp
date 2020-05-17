@@ -1,7 +1,7 @@
 const ContainerSymbol = Symbol('container');
 
 function missingContainer(target: any) {
-  throw new Error(`Wazup: You need to extend your component '${target.constructor.name}' with a Wazup 'Component' in order to be able to inject services.`)
+  throw new Error(`wazaap: You need to extend your component '${target.constructor.name}' with a wazaap 'Component' in order to be able to inject services.`)
 }
 
 export class Container {

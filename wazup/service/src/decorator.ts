@@ -1,5 +1,5 @@
 import Service from "./service";
-import { getContainer } from "@wazup/core";
+import { getContainer } from "@wazaap/core";
 
 export function service(serviceClass?: typeof Service): PropertyDecorator {
   return function() {

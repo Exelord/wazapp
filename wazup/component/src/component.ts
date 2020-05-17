@@ -1,5 +1,5 @@
 import { Component as ReactComponent } from 'react';
-import { ContainerContext, setContainer, Container } from '@wazup/core';
+import { ContainerContext, setContainer, Container } from '@wazaap/core';
 
 export default class Component<T = {}> extends ReactComponent<T> {
   static contextType = ContainerContext
