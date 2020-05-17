@@ -1,10 +1,10 @@
-import Component from "@wazup/component";
-import { autoTracking, tracked, action } from "@wazup/tracking";
+import Component, { tracking } from "@wazup/component";
+import { tracked, action } from "@wazup/tracking";
 import { service } from '@wazup/service';
 
 import AuthService from '@app/services/auth';
 
-@autoTracking
+@tracking
 class UserProfile extends Component {
   @service(AuthService) auth!: AuthService;
 
