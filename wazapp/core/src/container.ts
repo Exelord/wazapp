@@ -19,12 +19,12 @@ export class Container {
   }
 }
 
-export function getContainer(target: object): Container {
+export function getContainer(target: any): Container {
   const container = containerMap.get(target);
 
   return container || missingContainer(target);
 }
 
-export function setContainer(target: object, container: Container): void {
+export function setContainer(target: any, container: Container): void {
   containerMap.set(target, container);
 }
