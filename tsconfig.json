@@ -22,7 +22,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["./src*"],
+      "@app/*": ["./src/*"],
       "@wazup/*": ["./wazup/*"]
     }
   },
