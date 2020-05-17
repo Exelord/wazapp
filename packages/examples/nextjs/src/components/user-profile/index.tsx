@@ -1,5 +1,5 @@
-import Component, { tracking } from "@wazapp/component";
-import { tracked, action } from "@wazapp/tracking";
+import Component from "@wazapp/component";
+import { tracking, tracked, action } from "@wazapp/tracking";
 import { service } from '@wazapp/service';
 
 import AuthService from '@app/services/auth';

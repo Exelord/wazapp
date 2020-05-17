@@ -1,4 +1,5 @@
-import Component, { tracking } from "@wazapp/component";
+import Component from "@wazapp/component";
+import { tracking } from '@wazapp/tracking';
 import { yieldChildren } from "@wazapp/helpers";
 
 export type Props = {
