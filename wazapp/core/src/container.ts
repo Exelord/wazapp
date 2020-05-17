@@ -1,7 +1,9 @@
-const ContainerSymbol = Symbol('container');
+const containerMap = new WeakMap();
 
 function missingContainer(target: any) {
-  throw new Error(`wazapp: You need to extend your component '${target.constructor.name}' with a wazapp 'Component' and make sure your app in wrapped with Wazaap App in order to be able to inject services.`)
+  throw new Error(`wazapp: You need to extend your component '${target.constructor.name}'\
+                   with a wazapp 'Component' and make sure your app in wrapped with Wazaap\
+                   App in order to be able to inject services.`)
 }
 
 export class Container {
@@ -17,14 +19,12 @@ export class Container {
   }
 }
 
-export function setContainer(target: any, container: Container): void {
-  target[ContainerSymbol] = container;
+export function getContainer(target: object): Container {
+  const container = containerMap.get(target);
+
+  return container || missingContainer(target);
 }
 
-export function getContainer(target: any): Container {
-  const container = target[ContainerSymbol];
-
-  if (!container || !(container instanceof Container)) missingContainer(target)
-  
-  return container
+export function setContainer(target: object, container: Container): void {
+  containerMap.set(target, container);
 }
