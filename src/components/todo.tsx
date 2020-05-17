@@ -1,5 +1,5 @@
-import Component, { tracking } from "@wazaap/component";
-import { yieldChildren } from "@wazaap/helpers";
+import Component, { tracking } from "@wazapp/component";
+import { yieldChildren } from "@wazapp/helpers";
 
 export type Props = {
   todo: {

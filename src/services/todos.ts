@@ -1,5 +1,5 @@
-import Service from "@wazaap/service";
-import { tracked, action } from "@wazaap/tracking";
+import Service from "@wazapp/service";
+import { tracked, action } from "@wazapp/tracking";
 
 class TodosService extends Service {
   @tracked todos = [...new Array(10)].map((n, i) => ({

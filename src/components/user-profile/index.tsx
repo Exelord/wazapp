@@ -1,6 +1,6 @@
-import Component, { tracking } from "@wazaap/component";
-import { tracked, action } from "@wazaap/tracking";
-import { service } from '@wazaap/service';
+import Component, { tracking } from "@wazapp/component";
+import { tracked, action } from "@wazapp/tracking";
+import { service } from '@wazapp/service';
 
 import AuthService from '@app/services/auth';
 

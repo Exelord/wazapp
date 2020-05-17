@@ -23,7 +23,7 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": ["./src/*"],
-      "@wazaap/*": ["./wazaap/*"]
+      "@wazapp/*": ["./wazapp/*"]
     }
   },
   "exclude": [
