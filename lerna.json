@@ -1,0 +1,6 @@
+{
+  "packages": [
+    "packages/@wazapp/*"
+  ],
+  "version": "0.0.0"
+}
