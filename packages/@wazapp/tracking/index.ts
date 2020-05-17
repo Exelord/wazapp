@@ -1,5 +1,9 @@
 import { observable, action as mobxAction } from "mobx"
+import { observer as tracking } from 'mobx-react';
 
 export const action = mobxAction.bound
 
-export { observable as tracked }
+export {
+  tracking,
+  observable as tracked
+}

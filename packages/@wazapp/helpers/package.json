@@ -1,0 +1,20 @@
+{
+  "private": false,
+  "name": "@wazapp/helpers",
+  "version": "0.0.0",
+  "description": "Basic helpers",
+  "license": "MIT",
+  "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
+  "repository": "https://github.com/Exelord/wazzap",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/modules/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "react": "16.13.1"
+  }
+}

@@ -1,0 +1,78 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const fs = require('fs-extra');
+const { promisify } = require('util');
+
+const exec = promisify(require('child_process').exec);
+const glob = promisify(require('glob'));
+
+(async function () {
+  process.chdir(path.join(__dirname, '..'));
+  const oldDist = await glob('packages/@wazapp/{@*/*,!(@*)}/dist');
+  
+  await remove(oldDist);
+  await remove(['dist']);
+  
+  console.log('Transpiling modules...')
+  await buildTypescript('dist/modules', 'es2015');
+  
+  console.log('Transpiling commonjs...')
+  await buildTypescript('dist/commonjs', 'commonjs');
+
+  const packages = (await glob('dist/modules/packages/{@*/*,!(@*)}'))
+    .map((pkg) => pkg.replace('dist/modules/packages/', ''))
+    .flatMap((pkg) => [
+      {
+        from: path.join('dist', 'commonjs', 'packages', pkg),
+        to: path.join('packages', pkg, 'dist', 'commonjs'),
+      },
+      {
+        from: path.join('dist', 'modules', 'packages', pkg),
+        to: path.join('packages', pkg, 'dist', 'modules'),
+      },
+    ]);
+
+  await createDirs(packages.map((pkg) => pkg.to));
+  await move(packages);
+  await remove(['dist']);
+
+  console.log('\n\nDone');
+})();
+
+async function buildTypescript(outDir, moduleKind = 'es2015') {
+  try {
+    await exec(`node_modules/.bin/tsc -p . --outDir ${outDir} -m ${moduleKind}`);
+  } catch (err) {
+    if (err.stdout) {
+      console.log(err.stdout.toString());
+    } else {
+      throw err;
+    }
+  }
+}
+
+function createDirs(paths) {
+  return each(paths, (pathOfDir) => {
+    console.log(`Creating Dir ${pathOfDir}`);
+    return fs.mkdirp(pathOfDir);
+  });
+}
+
+function remove(paths) {
+  return each(paths, (pathOfDir) => {
+    console.log(`Removing ${pathOfDir}`);
+    return fs.remove(pathOfDir);
+  });
+}
+
+function move(paths) {
+  return each(paths, ({ from, to }) => {
+    console.log(`Moving ${from} -> ${to}`);
+    return fs.rename(from, to);
+  });
+}
+
+function each(paths, cb) {
+  return Promise.all(paths.map(cb));
+}

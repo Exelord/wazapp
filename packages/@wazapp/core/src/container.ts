@@ -2,7 +2,7 @@ const containerMap = new WeakMap();
 
 function missingContainer(target: any) {
   throw new Error(`wazapp: You need to extend your component '${target.constructor.name}'\
-                   with a wazapp 'Component' and make sure your app in wrapped with Wazaap\
+                   with a wazapp 'Component' and make sure your app in wrapped with wazapp\
                    App in order to be able to inject services.`)
 }
 

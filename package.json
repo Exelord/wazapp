@@ -1,31 +1,36 @@
 {
-  "name": "wazapp",
-  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "analyze": "ANALYZE=true yarn build",
-    "start": "next start"
+  "name": "wazapp",
+  "version": "0.0.0",
+  "description": "Glimmer in React. Wazapp!",
+  "license": "MIT",
+  "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
+  "repository": "https://github.com/Exelord/wazzap",
+  "main": "dist/index.js",
+  "workspaces": [
+    "packages/@wazapp/*",
+    "packages/examples/*"
+  ],
+  "browserslist": {
+    "production": [
+      "last 2 Edge versions",
+      "last 2 Chrome versions",
+      "last 2 Firefox versions",
+      "last 2 Safari versions"
+    ],
+    "development": [
+      "last 1 Chrome version",
+      "last 1 Firefox version",
+      "last 1 Safari version"
+    ]
   },
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "mobx": "^5.15.4",
-    "mobx-react": "^6.2.2",
-    "next": "9.4.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "sass": "^1.26.5"
+  "scripts": {
+    "build": "./scripts/build.js",
+    "prepublishOnly": "scripts/build.js",
+    "problems": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.8.3",
-    "@next/bundle-analyzer": "^9.4.1",
-    "@types/classnames": "^2.2.10",
-    "@types/node": "^14.0.1",
-    "@types/react": "^16.9.35",
-    "@types/react-bootstrap": "^1.0.1",
-    "next-compose-plugins": "^2.2.0",
-    "next-transpile-modules": "^3.3.0",
-    "typescript": "^3.9.2"
+    "typescript": "^3.4.3",
+    "fs-extra": "^9.0.0"
   }
 }

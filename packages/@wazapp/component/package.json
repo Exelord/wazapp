@@ -1,0 +1,21 @@
+{
+  "private": false,
+  "name": "@wazapp/component",
+  "version": "0.0.0",
+  "description": "Base component class",
+  "license": "MIT",
+  "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
+  "repository": "https://github.com/Exelord/wazzap",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/modules/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@wazapp/core": "^0.0.0",
+    "@wazapp/tracking": "^0.0.0"
+  }
+}
