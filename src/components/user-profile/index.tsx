@@ -20,7 +20,7 @@ class UserProfile extends Component {
         :
           (
             <form onSubmit={this.login}>
-              <input type="text" name="name" onInput={(event) => this.name = event.target.value} required />
+              <input type="text" name="name" onInput={(event) => this.name = (event.target as HTMLInputElement).value} required />
               <button type="submit">Login</button>
             </form>
           )
