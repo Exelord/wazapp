@@ -9,10 +9,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@wazapp/component": "^0.0.0",
-    "@wazapp/tracking": "^0.0.0",
-    "@wazapp/service": "^0.0.0",
-    "@wazapp/helpers": "^0.0.0",
+    "@wazapp/component": "^0.1.0",
+    "@wazapp/tracking": "^0.1.0",
+    "@wazapp/service": "^0.1.0",
+    "@wazapp/helpers": "^0.1.0",
     "classnames": "^2.2.6",
     "next": "9.4.1",
     "react": "16.13.1",
