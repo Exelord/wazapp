@@ -16,5 +16,8 @@
   },
   "dependencies": {
     "@wazapp/core": "^0.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
   }
 }
