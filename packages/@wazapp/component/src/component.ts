@@ -4,9 +4,7 @@ import { tracker } from '@wazapp/tracking';
 import { yieldChildren } from '@wazapp/helpers';
 
 @tracker
-export default class Component<T = {}> extends ReactComponent<T> {
-  static contextType = ContainerContext
-
+class Component<T = {}> extends ReactComponent<T> {
   constructor(props: T, context: Container) {
     super(props, context);
     setContainer(this, context);
@@ -24,6 +22,10 @@ export default class Component<T = {}> extends ReactComponent<T> {
     return this.template() || null;
   }
 }
+
+Object.defineProperty(Component, 'contextType', { value: ContainerContext });
+
+export default Component;
 
 // ? API OF THE FUTURE?
 // export class WazappComponent<T = {}> {
