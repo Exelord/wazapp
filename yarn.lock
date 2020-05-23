@@ -1937,9 +1937,6 @@
   resolved "https://registry.yarnpkg.com/@wazapp/helpers/-/helpers-0.1.0.tgz#8b7ddb46653dba237930613eb5e705f2e4375683"
   integrity sha512-Y4VrQrkL06RUJ27aQFCTgu+B7mOsQz0VRSF7SB1TJ/2QtSBrrRSnAZpxqmaLqWj+FD52Z4ABYam5F2U+/dZ+4A==
 
-"@wazapp/helpers@^0.1.1":
-  version "0.2.0"
-
 "@wazapp/service@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@wazapp/service/-/service-0.1.0.tgz#f54e8fdc945e037aa50370b69caa4050a38bf785"
