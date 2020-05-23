@@ -1,5 +1,4 @@
 import Component from "@wazapp/component";
-import { yieldChildren } from "@wazapp/helpers";
 import { action } from "@wazapp/tracking";
 
 export type Props = {
@@ -13,7 +12,7 @@ export default class Todo extends Component<Props> {
   template() {
     return (
       <li onClick={this.toggleTodo}>
-        {this.props.todo.name} - {yieldChildren(this.props.children, this.props.todo.done)}
+        {this.props.todo.name} - {this.yield(this.props.todo.done)}
       </li>
     );
   }

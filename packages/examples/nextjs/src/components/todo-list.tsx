@@ -3,6 +3,7 @@ import { service } from '@wazapp/service';
 
 import TodosService from "@app/services/todos";
 import Todo from './todo';
+import { each } from "@wazapp/helpers";
 
 export default class TodoList extends Component {
   @service(TodosService) todoService!: TodosService;
@@ -12,8 +13,10 @@ export default class TodoList extends Component {
       <div>
         <button onClick={this.todoService.add}>Add</button>
         <button onClick={this.todoService.reset}>Reset</button>
+
         {this.todoService.todos.length} : {this.todoService.done}
-        {this.todoService.todos.map((todo, index) => (
+
+        {each(this.todoService.todos, (todo, index) => (
           <Todo key={index} todo={todo}>
             {(done: boolean) => (
               <span>{done ? "DONE" : "TODO"}</span>

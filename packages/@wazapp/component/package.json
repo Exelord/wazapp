@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "@wazapp/core": "^0.1.0",
-    "@wazapp/tracking": "^0.1.1"
+    "@wazapp/tracking": "^0.1.1",
+    "@wazapp/helpers": "^0.1.1"
   },
   "peerDependencies": {
     "react": "^16.8.0"
