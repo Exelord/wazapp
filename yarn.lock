@@ -1917,6 +1917,44 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@wazapp/component@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@wazapp/component/-/component-0.1.1.tgz#7c665660a22f7450a98476bf39a086c5ae91159d"
+  integrity sha512-Bw7F34NMGyi8SarGVRlRxjqD0JIytEp31k8VDFxgAGPkJq/GqRGA3i8CKMzNn7hQufVwFAARYlw19NuZ+YqTKw==
+  dependencies:
+    "@wazapp/core" "^0.1.0"
+    "@wazapp/tracking" "^0.1.1"
+
+"@wazapp/core@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@wazapp/core/-/core-0.1.0.tgz#0022d715bbcaa1f0d6681a50442c4521ac6642a0"
+  integrity sha512-xsBydkSLhPGtaLtTZZ+hrctbtrl97AOimW4mHAo1feBzfMiDIDxoFE/gshX+3aADTLKuw5UFHLTgbvnfmB4LbA==
+  dependencies:
+    react "^16.13.1"
+
+"@wazapp/helpers@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@wazapp/helpers/-/helpers-0.1.0.tgz#8b7ddb46653dba237930613eb5e705f2e4375683"
+  integrity sha512-Y4VrQrkL06RUJ27aQFCTgu+B7mOsQz0VRSF7SB1TJ/2QtSBrrRSnAZpxqmaLqWj+FD52Z4ABYam5F2U+/dZ+4A==
+
+"@wazapp/helpers@^0.1.1":
+  version "0.2.0"
+
+"@wazapp/service@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@wazapp/service/-/service-0.1.0.tgz#f54e8fdc945e037aa50370b69caa4050a38bf785"
+  integrity sha512-mF4WDrCvjGF+I/z8bwvHbH1TEZd541yKahr6CkY0tw9hPFxCnD759BaTPptrbgWz5f9+kv3Aw1unzspAoDdOBA==
+  dependencies:
+    "@wazapp/core" "^0.1.0"
+
+"@wazapp/tracking@^0.1.0", "@wazapp/tracking@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@wazapp/tracking/-/tracking-0.1.1.tgz#23378deb70df8dcd7983ddef3ab9166c180a9090"
+  integrity sha512-SuVEBHQhXvuC4n14ga6yYIxK2f1anzxltcAnqbfdyNYSxDKJowW+aI/SkEZTjj4HPljnCCYXHXKVDPgkxB6R4w==
+  dependencies:
+    mobx "^5.15.4"
+    mobx-react "^6.2.1"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
