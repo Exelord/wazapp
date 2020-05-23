@@ -20,6 +20,11 @@ class TodosService extends Service {
       }))
     );
   }
+
+  @action
+  reset() {
+    this.todos = []
+  }
 }
 
 export default TodosService

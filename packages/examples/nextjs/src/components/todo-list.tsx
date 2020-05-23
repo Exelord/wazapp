@@ -11,6 +11,7 @@ export default class TodoList extends Component {
     return (
       <div>
         <button onClick={this.todoService.add}>Add</button>
+        <button onClick={this.todoService.reset}>Reset</button>
         {this.todoService.todos.length} : {this.todoService.done}
         {this.todoService.todos.map((todo, index) => (
           <Todo key={index} todo={todo}>
