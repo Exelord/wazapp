@@ -1,5 +1,4 @@
 import Component from "@wazapp/component";
-import { trackable } from '@wazapp/tracking';
 import { yieldChildren } from "@wazapp/helpers";
 
 export type Props = {
@@ -9,9 +8,8 @@ export type Props = {
   }
 }
 
-@trackable
 export default class Todo extends Component<Props> {
-  render() {
+  template() {
     return (
       <li onClick={() => (this.props.todo.done = !this.props.todo.done)}>
         {this.props.todo.name} - {yieldChildren(this.props.children, this.props.todo.done)}

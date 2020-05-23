@@ -15,7 +15,8 @@
     "build": "webpack"
   },
   "dependencies": {
-    "@wazapp/core": "^0.1.0"
+    "@wazapp/core": "^0.1.0",
+    "@wazapp/tracking": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^16.8.0"

@@ -1,15 +1,13 @@
-import Todo from './todo';
-import TodosService from "@app/services/todos";
-
 import Component from "@wazapp/component";
-import { trackable } from '@wazapp/tracking';
 import { service } from '@wazapp/service';
 
-@trackable
+import TodosService from "@app/services/todos";
+import Todo from './todo';
+
 export default class TodoList extends Component {
   @service(TodosService) todoService!: TodosService;
 
-  render() {
+  template() {
     return (
       <div>
         <button onClick={this.todoService.add}>Add</button>

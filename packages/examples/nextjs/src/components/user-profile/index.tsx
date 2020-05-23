@@ -1,16 +1,15 @@
 import Component from "@wazapp/component";
-import { trackable, tracked, action } from "@wazapp/tracking";
+import { tracked, action } from "@wazapp/tracking";
 import { service } from '@wazapp/service';
 
 import AuthService from '@app/services/auth';
 
-@trackable
 class UserProfile extends Component {
   @service(AuthService) auth!: AuthService;
 
   @tracked name?: string;
 
-  render() {
+  template() {
     return (
       <div>
         <h1>Hello {this.auth.user?.name ?? this.name}</h1>

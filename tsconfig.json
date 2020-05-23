@@ -17,10 +17,10 @@
     },
 
     "strict": true,
-    "strictPropertyInitialization": false,
     "skipLibCheck": true,
     "checkJs": true,
     "allowJs": true,
+    "removeComments": true,
     
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -36,6 +36,6 @@
     "node_modules",
     "scripts",
     "packages/examples",
-    "dist"
+    "packages/**/dist"
   ]
 }
