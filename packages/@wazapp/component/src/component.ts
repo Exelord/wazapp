@@ -15,7 +15,7 @@ export default class Component<T = {}> extends ReactComponent<T> {
     return null;
   }
 
-  render() {
+  render(): ReactNode {
     return this.template() || null;
   }
 }
