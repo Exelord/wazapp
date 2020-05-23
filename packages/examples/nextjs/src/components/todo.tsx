@@ -11,9 +11,9 @@ export type Props = {
 export default class Todo extends Component<Props> {
   template() {
     return (
-      <li onClick={this.toggleTodo}>
+      <div onClick={this.toggleTodo}>
         {this.props.todo.name} - {this.yield(this.props.todo.done)}
-      </li>
+      </div>
     );
   }
 

@@ -16,13 +16,17 @@ export default class TodoList extends Component {
 
         {this.todoService.todos.length} : {this.todoService.done}
 
-        {each(this.todoService.todos, (todo, index) => (
-          <Todo key={index} todo={todo}>
-            {(done: boolean) => (
-              <span>{done ? "DONE" : "TODO"}</span>
-            )}
-          </Todo>
-        ))}
+        <ul>
+          {each(this.todoService.todos, (todo, index) => (
+            <li key={index}>
+              <Todo todo={todo}>
+                {(done: boolean) => (
+                  <span>{done ? "DONE" : "TODO"}</span>
+                )}
+              </Todo>
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }
