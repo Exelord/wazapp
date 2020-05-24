@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "nextjs-example",
   "version": "0.1.1",
   "private": true,
   "scripts": {
@@ -9,10 +9,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@wazapp/component": "^0.2.0",
-    "@wazapp/tracking": "^0.2.0",
-    "@wazapp/service": "^0.2.0",
-    "@wazapp/helpers": "^0.2.0",
+    "@wazapp/component": "^0.3.0",
+    "@wazapp/tracking": "^0.3.0",
+    "@wazapp/service": "^0.3.0",
+    "@wazapp/helpers": "^0.3.0",
     "classnames": "^2.2.6",
     "next": "9.4.1",
     "react": "16.13.1",
