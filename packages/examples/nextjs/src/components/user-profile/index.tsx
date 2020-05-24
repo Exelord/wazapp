@@ -17,7 +17,7 @@ class UserProfile extends Component {
         <h1>Hello {this.auth.user?.name ?? this.name}</h1>
 
         {when(this.auth.isLoggedIn, (
-          <button onClick={this.auth.logout}>Logout</button>
+          <button onClick={this.logout}>Logout</button>
         ), (
           <form onSubmit={this.login}>
             <label htmlFor="name">Name</label>
@@ -27,6 +27,11 @@ class UserProfile extends Component {
         ))}
       </div>
     );
+  }
+
+  @action
+  logout() {
+    this.auth.logout();
   }
 
   @action

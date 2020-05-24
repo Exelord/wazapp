@@ -4,6 +4,7 @@ import { service } from '@wazapp/service';
 import TodosService from "@app/services/todos";
 import Todo from './todo';
 import { each } from "@wazapp/helpers";
+import { action } from "@wazapp/tracking";
 
 export default class TodoList extends Component {
   @service(TodosService) todoService!: TodosService;
@@ -11,14 +12,14 @@ export default class TodoList extends Component {
   template() {
     return (
       <div>
-        <button onClick={this.todoService.add}>Add</button>
-        <button onClick={this.todoService.reset}>Reset</button>
+        <button onClick={this.add}>Add</button>
+        <button onClick={this.reset}>Reset</button>
 
         {this.todoService.todos.length} : {this.todoService.done}
 
         <ul>
-          {each(this.todoService.todos, (todo, index) => (
-            <li key={index}>
+          {each(this.todoService.todos, (todo) => (
+            <li key={todo.id}>
               <Todo todo={todo}>
                 {(done: boolean) => (
                   <span>{done ? "DONE" : "TODO"}</span>
@@ -29,5 +30,15 @@ export default class TodoList extends Component {
         </ul>
       </div>
     );
+  }
+
+  @action
+  add() {
+    this.todoService.add();
+  }
+
+  @action
+  reset() {
+    this.todoService.reset();
   }
 }
