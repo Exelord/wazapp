@@ -21,7 +21,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["./src/*"]
+      "@src/*": ["./src/*"]
     }
   },
   "exclude": [

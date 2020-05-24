@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
-import TodoList from "@app/components/todo-list";
-import UserProfile from '@app/components/user-profile';
+import TodoList from "@src/components/todo-list";
+import UserProfile from '@src/components/user-profile';
 
 export type IndexPageProps = {}
 

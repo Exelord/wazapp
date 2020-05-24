@@ -1,7 +1,7 @@
 import Component from "@wazapp/component";
 import { service } from '@wazapp/service';
 
-import TodosService from "@app/services/todos";
+import TodosService from "@src/services/todos";
 import Todo from './todo';
 import { each } from "@wazapp/helpers";
 import { action } from "@wazapp/tracking";

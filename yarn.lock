@@ -2248,11 +2248,6 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
 
-"@types/react-bootstrap@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@types/react-bootstrap/-/react-bootstrap-1.0.1.tgz#3badd512fc37913b5e72f1ed94e3aacbd1452d97"
-  integrity sha512-n68SeFrpOFWiSN2DCpyn17ZwTZzY8+mio8E9oCrl7abHytUz3r7ZYIKPxaETHYQxCi8oxF3NultpMAyBxFIjhg==
-
 "@types/react@^16.9.35":
   version "16.9.35"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.35.tgz#a0830d172e8aadd9bd41709ba2281a3124bbd368"

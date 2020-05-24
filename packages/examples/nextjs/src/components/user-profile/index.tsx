@@ -2,7 +2,7 @@ import Component from "@wazapp/component";
 import { tracked, action } from "@wazapp/tracking";
 import { service } from '@wazapp/service';
 
-import AuthService from '@app/services/auth';
+import AuthService from '@src/services/auth';
 import { FormEvent } from "react";
 import { when } from "@wazapp/helpers";
 

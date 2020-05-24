@@ -5,7 +5,7 @@
   "description": "Glimmer in React. Wazapp!",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
-  "repository": "https://github.com/Exelord/wazzap",
+  "repository": "https://github.com/wazappjs/wazapp",
   "main": "dist/index.js",
   "workspaces": [
     "packages/@wazapp/*",
