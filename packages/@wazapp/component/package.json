@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@wazapp/component",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Base component class",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
@@ -15,9 +15,9 @@
     "build": "webpack"
   },
   "dependencies": {
-    "@wazapp/core": "^0.2.0",
-    "@wazapp/helpers": "^0.2.0",
-    "@wazapp/tracking": "^0.2.0"
+    "@wazapp/core": "^0.3.0",
+    "@wazapp/helpers": "^0.3.0",
+    "@wazapp/tracking": "^0.3.0"
   },
   "peerDependencies": {
     "react": "^16.8.0"

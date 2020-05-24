@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@wazapp/core",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Core functionality",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
