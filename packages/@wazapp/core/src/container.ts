@@ -13,7 +13,7 @@ export class Container {
     return this.registry.get(registration) || this.register(registration, new registration(this));
   }
 
-  register(registration: any, value: any) {
+  private register(registration: any, value: any) {
     this.registry.set(registration, value);
     return value;
   }

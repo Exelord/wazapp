@@ -1,11 +1,11 @@
-import React from 'react';
-import { createContext, useMemo } from 'react';
+import React, { ReactNode } from 'react';
+import { createContext, useState } from 'react';
 import { Container } from './container';
 
 export const ContainerContext = createContext({});
 
-const App = ({ container, children }: { container?: Container, children: any }) => {
-  const appContainer = useMemo(() => container || new Container(), [container]);
+const App = ({ children }: { children: ReactNode }) => {
+  const [appContainer] = useState(new Container());
 
   return (
     <ContainerContext.Provider value={appContainer}>
