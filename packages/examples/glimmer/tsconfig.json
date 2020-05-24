@@ -12,9 +12,6 @@
     "rootDir": ".",
     "outDir": "dist",
     "baseUrl": ".",
-    "paths": {
-      "*": ["packages/@wazapp/*"]
-    },
 
     "strict": true,
     "skipLibCheck": true,
@@ -29,12 +26,9 @@
     "forceConsistentCasingInFileNames": true,
     
     "resolveJsonModule": true,
-    "experimentalDecorators": true,
-    "jsx": "react",
+    "experimentalDecorators": true
   },
   "exclude": [
-    "node_modules",
-    "scripts",
-    "packages/**/dist"
+    "node_modules"
   ]
 }
