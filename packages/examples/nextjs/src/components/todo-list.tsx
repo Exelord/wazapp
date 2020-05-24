@@ -7,7 +7,7 @@ import { each } from "@wazapp/helpers";
 import { action } from "@wazapp/tracking";
 
 export default class TodoList extends Component {
-  @service(TodosService) todoService!: TodosService;
+  @service(TodosService) todosService!: TodosService;
 
   template() {
     return (
@@ -15,10 +15,10 @@ export default class TodoList extends Component {
         <button onClick={this.add}>Add</button>
         <button onClick={this.reset}>Reset</button>
 
-        {this.todoService.todos.length} : {this.todoService.done}
+        {this.todosService.todos.length} : {this.todosService.done}
 
         <ul>
-          {each(this.todoService.todos, (todo) => (
+          {each(this.todosService.todos, (todo) => (
             <li key={todo.id}>
               <Todo todo={todo}>
                 {(done: boolean) => (
@@ -34,11 +34,11 @@ export default class TodoList extends Component {
 
   @action
   add() {
-    this.todoService.add();
+    this.todosService.add();
   }
 
   @action
   reset() {
-    this.todoService.reset();
+    this.todosService.reset();
   }
 }
