@@ -20,11 +20,7 @@ export default class TodoList extends Component {
         <ul>
           {each(this.todosService.todos, (todo) => (
             <li key={todo.id}>
-              <Todo todo={todo}>
-                {(done: boolean) => (
-                  <span>{done ? "DONE" : "TODO"}</span>
-                )}
-              </Todo>
+              <Todo todo={todo} />
             </li>
           ))}
         </ul>
