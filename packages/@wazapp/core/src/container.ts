@@ -10,11 +10,11 @@ export class Container {
   private registry = new Map();
 
   lookup(registration: any) {
-    return this.registry.get(registration) || this.register(registration, new registration(this));
+    return this.registry.get(registration);
   }
 
-  private register(registration: any, value: any) {
-    this.registry.set(registration, value);
+  register(key: any, value: any) {
+    this.registry.set(key, value);
     return value;
   }
 }
