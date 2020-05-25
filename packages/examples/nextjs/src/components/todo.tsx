@@ -12,7 +12,7 @@ export default class Todo extends Component<Props> {
   template() {
     return (
       <div onClick={this.toggleTodo}>
-        {this.props.todo.name} - {this.yield(this.props.todo.done)}
+        {this.props.todo.name} - {this.props.todo.done ? "DONE" : "TODO"}
       </div>
     );
   }
