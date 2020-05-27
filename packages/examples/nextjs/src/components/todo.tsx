@@ -1,14 +1,14 @@
 import Component from "@wazapp/component";
 import { action } from "@wazapp/tracking";
 
-export type Props = {
+export type TodoProps = {
   todo: {
     name: string
     done: boolean
   }
 }
 
-export default class Todo extends Component<Props> {
+export default class Todo extends Component<TodoProps> {
   template() {
     return (
       <div onClick={this.toggleTodo}>

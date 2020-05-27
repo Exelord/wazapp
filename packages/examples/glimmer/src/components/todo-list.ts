@@ -6,21 +6,19 @@ import Todo from './todo';
 import TodosService from 'src/services/todos';
 
 export default class TodoList extends Component {
-  @service('todos') todoService!: TodosService;
+  @service('todos') todosService!: TodosService;
 
   static template = hbs`
     <div>
       <button {{on "click" this.add}}>Add</button>
       <button {{on "click" this.reset}}>Reset</button>
 
-      {{this.todoService.todos.length}} : {{this.todoService.done}}
+      {{this.todosService.todos.length}} : {{this.todosService.done}}
 
       <ul>
-        {{#each this.todoService.todos as |todo|}}
+        {{#each this.todosService.todos as |todo|}}
           <li>
-            <Todo @todo={{todo}} as |done|>
-              <span>{{if done "DONE" "TODO"}}</span>
-            </Todo>
+            <Todo @todo={{todo}} />
           </li>
         {{/each}}
       </ul>
@@ -29,11 +27,11 @@ export default class TodoList extends Component {
 
   @action
   add() {
-    this.todoService.add();
+    this.todosService.add();
   }
 
   @action
   reset() {
-    this.todoService.reset();
+    this.todosService.reset();
   }
 }

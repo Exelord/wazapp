@@ -1,10 +1,10 @@
 import Component from "@wazapp/component";
-import { service } from '@wazapp/service';
-
-import TodosService from "@src/services/todos";
-import Todo from './todo';
-import { each } from "@wazapp/helpers";
 import { action } from "@wazapp/tracking";
+import { service } from '@wazapp/service';
+import { each } from "@wazapp/helpers";
+
+import Todo from './todo';
+import TodosService from "@src/services/todos";
 
 export default class TodoList extends Component {
   @service(TodosService) todosService!: TodosService;
