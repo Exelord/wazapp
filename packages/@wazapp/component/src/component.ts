@@ -11,11 +11,13 @@ class Component<T = {}> extends ReactComponent<T> {
   }
 
   template(): ReactNode {
-    return null;
+    return this.yield();
   }
 
   yield(...props: any[]) {
-    return yieldChildren(this.props.children, ...props)
+    const { children } = this.props;
+
+    return children ? yieldChildren(this.props.children, ...props) : null;
   }
 
   render(): ReactNode {
