@@ -1,5 +1,14 @@
 import { isObject } from "./internals/is-object";
-import { uuid } from '@wazapp/utils';
+
+let _guid = 0;
+
+function generateGuid() {
+  return `guid-${++_guid}`
+}
+
+export function resetGuid() {
+  _guid = 0;
+}
 
 const OBJECT_STORE = new WeakMap();
 const NON_OBJECT_STORE = new Map();
@@ -10,7 +19,7 @@ export default function guidFor(value: any | null | undefined) {
   let guid = store.get(value);
 
   if (guid === undefined) {
-    guid = uuid(7);
+    guid = generateGuid();
     store.set(value, guid);
   }
 
