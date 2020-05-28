@@ -1,7 +1,15 @@
-export default function each<T>(collection: T[] | null | undefined, onItems: (item: T, index: number) => {} | any, onEmpty: any = null) {
+import { createElement, Fragment } from "react";
+import { guidFor } from "@wazapp/utils";
+
+function each<T>(collection: T[] | null | undefined, onItem: (item: T, index: number) => any | any, onEmpty: any = null) {
   if (collection && collection.length) {
-    return collection.map((item: any, index: number) => typeof onItems === 'function' ? onItems(item, index) : onItems);
+    return collection.map((item: any, index: number) => {
+      const children =  typeof onItem === 'function' ? onItem(item, index) : onItem;
+      return createElement(Fragment, { key: guidFor(item) }, children)
+    });
   }
 
   return onEmpty;
 }
+
+export default each;

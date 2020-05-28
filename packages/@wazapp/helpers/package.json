@@ -14,6 +14,9 @@
   "scripts": {
     "build": "webpack"
   },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
   "dependencies": {
     "@wazapp/utils": "^0.0.0",
     "classnames": "^2.2.6"
