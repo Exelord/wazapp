@@ -15,9 +15,12 @@
     "build": "webpack"
   },
   "dependencies": {
+    "@wazapp/utils": "^0.0.0",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
+    "@wazapp/component": "^0.3.0",
+    "@types/classnames": "^2.2.3",
     "react": "^16.8.0"
   }
 }
