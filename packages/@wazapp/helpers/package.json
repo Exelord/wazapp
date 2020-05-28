@@ -14,6 +14,9 @@
   "scripts": {
     "build": "webpack"
   },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
   "devDependencies": {
     "react": "^16.8.0"
   }
