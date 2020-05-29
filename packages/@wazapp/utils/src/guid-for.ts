@@ -19,12 +19,13 @@ class GuidController {
   }
 }
 
-let guidController = new GuidController();
+let guidController: GuidController | undefined;
 
 export default function guidFor(value: any): string {
+  if (!guidController) throw new Error('Wazapp: GUID controller has not been setup.');
   return guidController.generate(value);
 }
 
-export function resetGuid(): void {
+export function setupGuid(): void {
   guidController = new GuidController();
 }
