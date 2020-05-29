@@ -10,14 +10,32 @@ class Component<T = {}> extends ReactComponent<T> {
     setContainer(this, context);
   }
 
+  didMount(): void {}
+  didUpdate(_prevProps: any): void {}
+  willUnmount(): void {}
+
   template(): ReactNode {
     return this.yield();
   }
 
-  yield(...props: any[]) {
+  protected yield(...props: any[]) {
     const { children } = this.props;
 
     return children ? yieldChildren(this.props.children, ...props) : null;
+  }
+
+  // Overrides
+
+  componentDidMount() {
+    this.didMount();
+  }
+
+  componentDidUpdate(prevProps: any) {
+    this.didUpdate(prevProps);
+  }
+
+  componentWillUnmount() {
+    this.willUnmount();
   }
 
   render(): ReactNode {
@@ -42,7 +60,7 @@ export default Component;
 //     return null;
 //   }
 
-//   didMount(): void {}
-//   didUpdate(): void {}
-//   willUnmount(): void {}
+// didMount(): void {}
+// didUpdate(): void {}
+// willUnmount(): void {}
 // }
