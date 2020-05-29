@@ -1,27 +1,30 @@
 import { isObject } from "./internals/is-object";
 
-let _guid = 0;
+class GuidController {
+  private id = 0;
+  private objectStore = new WeakMap();
+  private nonObjectStore = new Map();
 
-function generateGuid() {
-  return `guid-${++_guid}`
-}
+  generate(value: any): string {
+    const store = isObject(value) ? this.objectStore : this.nonObjectStore;
 
-export function resetGuid() {
-  _guid = 0;
-}
+    let guid = store.get(value);
 
-const OBJECT_STORE = new WeakMap();
-const NON_OBJECT_STORE = new Map();
-
-export default function guidFor(value: any | null | undefined) {
-  const store = isObject(value) ? OBJECT_STORE : NON_OBJECT_STORE;
-
-  let guid = store.get(value);
-
-  if (guid === undefined) {
-    guid = generateGuid();
-    store.set(value, guid);
+    if (guid === undefined) {
+      guid = `guid-${++this.id}`
+      store.set(value, guid);
+    }
+  
+    return guid;
   }
+}
 
-  return guid;
+let guidController = new GuidController();
+
+export default function guidFor(value: any): string {
+  return guidController.generate(value);
+}
+
+export function resetGuid(): void {
+  guidController = new GuidController();
 }
