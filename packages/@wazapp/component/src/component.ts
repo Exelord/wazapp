@@ -14,7 +14,7 @@ class Component<T = {}> extends ReactComponent<T> {
   didUpdate(_prevProps: any): void {}
   willUnmount(): void {}
 
-  template(): ReactNode {
+  template(): ReactNode | null | undefined {
     return this.yield();
   }
 
