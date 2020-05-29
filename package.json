@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "fs-extra": "^9.0.0",
-    "lerna": "^3.20.2",
-    "typescript": "^3.4.3"
+    "lerna": "^3.22.0",
+    "typescript": "^3.9.3"
   }
 }
