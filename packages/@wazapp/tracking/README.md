@@ -7,7 +7,7 @@ Currently available:
 - `tracked` - https://mobx.js.org/refguide/observable.html
 - `tracker` - https://mobx.js.org/refguide/observer-component.html
 
-In most cases you will be only in touch with `action` and `tracked`.
+In most cases you will be only in touch with `action` and `tracked` as all Wazapp Component are automatically using `tracker`.
 
 The `action` will make sure that the function it's used on has been bind to current context.
 The `tracked` will make the property observed. Whenever it will change the component will rerender.
