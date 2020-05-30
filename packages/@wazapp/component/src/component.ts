@@ -49,7 +49,8 @@ class Component<T = {}> extends ReactComponent<T> {
     this.#isUnmounting = true;
     
     this.willUnmount();
-    
+
+    this.#isUnmounting = false;
     this.#isUnmounted = true;
   }
 
