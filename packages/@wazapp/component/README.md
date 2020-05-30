@@ -2,10 +2,10 @@
 
 Component package expose Wazapp Component which is built on top of React Component. It integrates tracking, app container (allows to use services) and simplify component API.
 
-> ## Warning!
+> ### Warning!
 > **Hence the component extends from React Component, do not use any of its API. It may be removed in the future and using it may cause incompatibility with Wazapp components!**
 
-## Example of usage
+### Example of usage
 
 ```typescript
 import Component from "@wazapp/component";
@@ -19,11 +19,11 @@ export default class MyComponent extends Component {
 }
 ```
 
-# API
+## API
 
-## Properties
+### Properties
 
-### `props`
+#### `props`
 
 `props` exactly like in React Component returns an Object of passed properties to the component. They are automatically tracked by Wazapp.
 
@@ -47,17 +47,17 @@ export default class MainComponent extends Component {
 }
 ```
 
-### `isUnmounting`
+#### `isUnmounting`
 
 A boolean flag to tell if the component is in the process of unmounting. This is set to true before `willUnmount` is called.
 
-### `isUnmounted`
+#### `isUnmounted`
 
 A boolean to tell if the component has been fully unmounted. This is set to true after `willUnmount` is called.
 
-## Methods
+### Methods
 
-### `template()`
+#### `template()`
 
 `template()` allows you to define your component template written in JSX. Remember that you are still working in React so things like `className` instead of `class` are still required.
 
@@ -75,7 +75,7 @@ export default class MyComponent extends Component {
 }
 ```
 
-### `yield(...args)`
+#### `yield(...args)`
 
 `yield()` allows you to return component's `children` or in case the `children` is a function, it will allow you to call it with custom arguments.
 
@@ -106,9 +106,9 @@ export default class MainComponent extends Component {
 }
 ```
 
-## Callbacks
+### Callbacks
 
-### `didMount()`
+#### `didMount()`
 
 `didMount` is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here.
 
@@ -124,7 +124,7 @@ export default class MyComponent extends Component {
 }
 ```
 
-### `didUpdate(prevProps)`
+#### `didUpdate(prevProps)`
 
 `didUpdate` is invoked immediately after updating occurs. This method is not called for the initial render.
 
@@ -143,7 +143,7 @@ export default class MyComponent extends Component {
 }
 ```
 
-### `willUnmount()`
+#### `willUnmount()`
 
 `willUnmount` is invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in `didMount()`.
 
