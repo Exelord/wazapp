@@ -4,19 +4,19 @@ import { tracker } from '@wazapp/tracking';
 import { yieldChildren } from '@wazapp/helpers';
 
 @tracker
-class Component<T = {}> extends ReactComponent<T> {
+class Component<P = {}> extends ReactComponent<P> {
   #isUnmounting = false;
   #isUnmounted = false;
 
-  get isUnmounting() {
+  get isUnmounting(): boolean {
     return this.#isUnmounting;
   }
 
-  get isUnmounted() {
+  get isUnmounted(): boolean {
     return this.#isUnmounted;
   }
 
-  constructor(props: T, context: Container) {
+  constructor(props: P, context: Container) {
     super(props, context);
     setContainer(this, context);
   }
@@ -25,27 +25,29 @@ class Component<T = {}> extends ReactComponent<T> {
   didUpdate(_prevProps: any): void {}
   willUnmount(): void {}
 
-  template(): ReactNode | null | undefined {
+  template(): ReactNode {
     return this.yield();
   }
 
-  protected yield(...props: any[]) {
-    const { children } = this.props;
-
-    return children ? yieldChildren(this.props.children, ...props) : null;
+  protected yield(...props: any[]): ReactNode {
+    return yieldChildren(this.props.children, ...props);
   }
 
-  // Overrides
+  // React Overrides
 
-  componentDidMount() {
+  render(): ReactNode {
+    return this.template() || null;
+  }
+
+  componentDidMount(): void {
     this.didMount();
   }
 
-  componentDidUpdate(prevProps: any) {
+  componentDidUpdate(prevProps: P): void {
     this.didUpdate(prevProps);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(): void {
     this.#isUnmounting = true;
     
     this.willUnmount();
@@ -53,30 +55,8 @@ class Component<T = {}> extends ReactComponent<T> {
     this.#isUnmounting = false;
     this.#isUnmounted = true;
   }
-
-  render(): ReactNode {
-    return this.template() || null;
-  }
 }
 
 Object.defineProperty(Component, 'contextType', { value: ContainerContext });
 
 export default Component;
-
-// ? API OF THE FUTURE?
-// export class WazappComponent<T = {}> {
-//   props: T;
-
-//   constructor(props: T, context: Container) {
-//     setContainer(this, context);
-//     this.props = props;
-//   }
-
-//   template(): ReactNode {
-//     return null;
-//   }
-
-// didMount(): void {}
-// didUpdate(): void {}
-// willUnmount(): void {}
-// }
