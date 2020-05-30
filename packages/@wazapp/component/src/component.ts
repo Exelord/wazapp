@@ -5,6 +5,17 @@ import { yieldChildren } from '@wazapp/helpers';
 
 @tracker
 class Component<T = {}> extends ReactComponent<T> {
+  #isUnmounting = false;
+  #isUnmounted = false;
+
+  get isUnmounting() {
+    return this.#isUnmounting;
+  }
+
+  get isUnmounted() {
+    return this.#isUnmounted;
+  }
+
   constructor(props: T, context: Container) {
     super(props, context);
     setContainer(this, context);
@@ -35,7 +46,11 @@ class Component<T = {}> extends ReactComponent<T> {
   }
 
   componentWillUnmount() {
+    this.#isUnmounting = true;
+    
     this.willUnmount();
+    
+    this.#isUnmounted = true;
   }
 
   render(): ReactNode {

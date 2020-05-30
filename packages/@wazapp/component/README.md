@@ -19,25 +19,9 @@ export default class MyComponent extends Component {
 }
 ```
 
-## API
+# API
 
-### `template()`
-
-`template()` allows you to define your component template written in JSX. Remember that you are still working in React so things like `className` instead of `class` are still required.
-
-The template can return `nil`, `undefined` or `ReactNode`. By default if not defined it will `yield()` component's `children`.
-
-#### Example of usage
-
-```typescript
-export default class MyComponent extends Component {
-  template() {
-    return (
-      <h1>This is Wazapp component</h1>
-    );
-  }
-}
-```
+## Properties
 
 ### `props`
 
@@ -63,9 +47,40 @@ export default class MainComponent extends Component {
 }
 ```
 
+### `isUnmounting`
+
+A boolean flag to tell if the component is in the process of unmounting. This is set to true before `willUnmount` is called.
+
+### `isUnmounted`
+
+A boolean to tell if the component has been fully unmounted. This is set to true after `willUnmount` is called.
+
+## Methods
+
+### `template()`
+
+`template()` allows you to define your component template written in JSX. Remember that you are still working in React so things like `className` instead of `class` are still required.
+
+The template can return `nil`, `undefined` or `ReactNode`. By default if not defined it will `yield()` component's `children`.
+
+#### Example of usage
+
+```typescript
+export default class MyComponent extends Component {
+  template() {
+    return (
+      <h1>This is Wazapp component</h1>
+    );
+  }
+}
+```
+
 ### `yield(...args)`
 
 `yield()` allows you to return component's `children` or in case the `children` is a function, it will allow you to call it with custom arguments.
+
+#### Arguments
+- `...args`: `any[]` - your custom arguments that will be used on `children` call (if `children` is a function)
 
 #### Example of usage
 
@@ -91,6 +106,8 @@ export default class MainComponent extends Component {
 }
 ```
 
+## Callbacks
+
 ### `didMount()`
 
 `didMount` is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here.
@@ -112,6 +129,9 @@ export default class MyComponent extends Component {
 `didUpdate` is invoked immediately after updating occurs. This method is not called for the initial render.
 
 Use this as an opportunity to operate on the DOM when the component has been updated.
+
+#### Arguments
+- `prevProps`: `T<ComponentProps>` - previous component properties
 
 #### Example of usage
 
