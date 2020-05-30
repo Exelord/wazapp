@@ -7,7 +7,7 @@ Component package expose Wazapp Component which is built on top of React Compone
 
 ## Example of usage
 
-```ts
+```typescript
 import Component from "@wazapp/component";
 
 export default class MyComponent extends Component {
@@ -29,7 +29,7 @@ The template can return `nil`, `undefined` or `ReactNode`. By default if not def
 
 #### Example of usage
 
-```ts
+```typescript
 export default class MyComponent extends Component {
   template() {
     return (
@@ -45,7 +45,7 @@ export default class MyComponent extends Component {
 
 #### Example of usage
 
-```ts
+```typescript
 export default class MyComponent extends Component {
   template() {
     return (
@@ -69,7 +69,7 @@ export default class MainComponent extends Component {
 
 #### Example of usage
 
-```ts
+```typescript
 export default class MyComponent extends Component {
   template() {
     return (
@@ -99,7 +99,7 @@ This method is a good place to set up any subscriptions. If you do that, don’t
 
 #### Example of usage
 
-```ts
+```typescript
 export default class MyComponent extends Component {
   didMount() {
     console.log('Component has been mounted')
@@ -115,7 +115,7 @@ Use this as an opportunity to operate on the DOM when the component has been upd
 
 #### Example of usage
 
-```ts
+```typescript
 export default class MyComponent extends Component {
   didUpdate(prevProps) {
     console.log(prevProps.name, this.props.name)
@@ -129,7 +129,7 @@ export default class MyComponent extends Component {
 
 #### Example of usage
 
-```ts
+```typescript
 export default class MyComponent extends Component {
   willUnmount() {
     console.log('Component has been unmounted`)
