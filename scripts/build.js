@@ -15,7 +15,7 @@ const glob = promisify(require('glob'));
   await remove(['dist']);
   
   console.log('Transpiling modules...')
-  await buildTypescript('dist/modules', 'es2015');
+  await buildTypescript('dist/modules', 'es2020');
   
   console.log('Transpiling commonjs...')
   await buildTypescript('dist/commonjs', 'commonjs');

@@ -37,15 +37,18 @@ class Component<T = {}> extends ReactComponent<T> {
 
   // Overrides
 
-  componentDidMount() {
+  // @ts-ignore
+  private componentDidMount() {
     this.didMount();
   }
 
-  componentDidUpdate(prevProps: any) {
+  // @ts-ignore
+  private componentDidUpdate(prevProps: any) {
     this.didUpdate(prevProps);
   }
 
-  componentWillUnmount() {
+  // @ts-ignore
+  private componentWillUnmount() {
     this.#isUnmounting = true;
     
     this.willUnmount();
@@ -54,7 +57,8 @@ class Component<T = {}> extends ReactComponent<T> {
     this.#isUnmounted = true;
   }
 
-  render(): ReactNode {
+  // @ts-ignore
+  private render(): ReactNode {
     return this.template() || null;
   }
 }
