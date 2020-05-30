@@ -9,11 +9,11 @@ function missingContainer(target: any) {
 export class Container {
   private registry = new Map();
 
-  lookup(registration: any) {
-    return this.registry.get(registration);
+  lookup<T>(key: any): T {
+    return this.registry.get(key);
   }
 
-  register(key: any, value: any) {
+  register<T>(key: any, value: T): T {
     this.registry.set(key, value);
     return value;
   }

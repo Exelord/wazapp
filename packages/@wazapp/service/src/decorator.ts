@@ -1,15 +1,15 @@
 import Service from "./service";
-import { getContainer } from "@wazapp/core";
+import { getContainer, Container } from "@wazapp/core";
 
-export function service(serviceClass: typeof Service): PropertyDecorator {
+export function service<T extends Service>(serviceClass: new(container: Container) => T): PropertyDecorator {
   return function() {
     return {
       enumerable: true,
       configurable: false,
 
-      get(): Service {
+      get(): T {
         const container = getContainer(this);
-        const service = container.lookup(serviceClass);
+        const service = container.lookup<T>(serviceClass);
         return service || container.register(serviceClass, new serviceClass(container));
       }
     }
