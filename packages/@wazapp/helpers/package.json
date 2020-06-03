@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@wazapp/helpers",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Basic helpers",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
@@ -18,12 +18,12 @@
     "react": "^16.8.0"
   },
   "dependencies": {
-    "@wazapp/utils": "^0.4.0",
+    "@wazapp/utils": "^0.5.0",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.3",
-    "@wazapp/component": "^0.4.0",
+    "@wazapp/component": "^0.5.0",
     "react": "^16.8.0"
   }
 }
