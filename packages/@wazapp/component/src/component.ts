@@ -25,7 +25,7 @@ class Component<P = {}> extends ReactComponent<P> {
   didUpdate(_prevProps: any): void {}
   willUnmount(): void {}
 
-  template(): ReactNode {
+  template(props: P): ReactNode {
     return this.yield();
   }
 
@@ -36,7 +36,7 @@ class Component<P = {}> extends ReactComponent<P> {
   // React Overrides
 
   render(): ReactNode {
-    return this.template() || null;
+    return this.template(this.props) || null;
   }
 
   componentDidMount(): void {

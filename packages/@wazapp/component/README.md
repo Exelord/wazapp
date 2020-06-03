@@ -57,9 +57,9 @@ A boolean to tell if the component has been fully unmounted. This is set to true
 
 ### Methods
 
-#### `template()`
+#### `template(props: P)`
 
-`template()` allows you to define your component template written in JSX. Remember that you are still working in React so things like `className` instead of `class` are still required.
+`template(props)` allows you to define your component template written in JSX. Remember that you are still working in React so things like `className` instead of `class` are still required.
 
 The template can return `nil`, `undefined` or `ReactNode`. By default if not defined it will `yield()` component's `children`.
 
@@ -67,9 +67,9 @@ The template can return `nil`, `undefined` or `ReactNode`. By default if not def
 
 ```typescript
 export default class MyComponent extends Component {
-  template() {
+  template({ name }) {
     return (
-      <h1>This is Wazapp component</h1>
+      <h1>Hello {name}, this is Wazapp component</h1>
     );
   }
 }
