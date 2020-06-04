@@ -2376,7 +2376,7 @@
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
   integrity sha512-/+CRPXpBDpo2RK9C68N3b2cOvO0Cf5B9aPijHsoDQTHivnGSObdOF2BRQOYjojWTDy6nQvMjmqRXIxH55VjxxA==
 
-"@types/classnames@^2.2.3":
+"@types/classnames@^2.2.10", "@types/classnames@^2.2.3":
   version "2.2.10"
   resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.10.tgz#cc658ca319b6355399efc1f5b9e818f1a24bf999"
   integrity sha512-1UzDldn9GfYYEsWWnn/P4wkTlkZDH7lDb0wBMGbtIQc9zXEQq7FlKBdZUn6OBqD8sKZZ2RQO2mAjGpXiDGoRmQ==
@@ -2517,6 +2517,40 @@
     "@types/uglify-js" "*"
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
+
+"@wazapp/component@^0.3.0":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/component/-/component-0.3.2.tgz#accdf2f171795939f098f08b0745c0841e8ee206"
+  integrity sha512-9I0wetsdwPfUKAK1oedxNBl4hFC1IUNRogluMMT5MQLpilzJU/t9lBHzdA3fow3AaxrRprZYg2641rDLH55Fvw==
+  dependencies:
+    "@wazapp/core" "^0.3.2"
+    "@wazapp/helpers" "^0.3.1"
+    "@wazapp/tracking" "^0.3.2"
+
+"@wazapp/core@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/core/-/core-0.3.2.tgz#f96c9d0bea519220a8b7e65468c78151f0a0db07"
+  integrity sha512-jvCK0MZdDH+n5xJr9WAC2FGqXFSed76e9Lgs4LuQ5lOKRozMiFYhMK+y6evxVtATyklzxNvSvZ7RrGF0DmC1kQ==
+
+"@wazapp/helpers@^0.3.0", "@wazapp/helpers@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@wazapp/helpers/-/helpers-0.3.1.tgz#0055f66dfb1aea12b935b23ad65339c313124599"
+  integrity sha512-z5utztoeYNzMwy5lksWiVpPsQ83Uno+1JsOameKRwhE46aIKDMeDd7+bsY52OyN/H0byHNdcdyiW3aY0udhwlQ==
+
+"@wazapp/service@^0.3.0":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/service/-/service-0.3.2.tgz#e8101a91e2db7ad92992a646b81244ba1792a37d"
+  integrity sha512-f8XMGvq4+UUtoV3iPjUb8YbQwAo5EGvEGAYFO/AQil2gtxpsK5/4uWbAwBL9kO8SjpR9IN+E6F8Tzmm8F5/RMw==
+  dependencies:
+    "@wazapp/core" "^0.3.2"
+
+"@wazapp/tracking@^0.3.0", "@wazapp/tracking@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/tracking/-/tracking-0.3.2.tgz#8c1ea5e16c82bddbf0d8f5e5aad12c8cc624739c"
+  integrity sha512-9iM1rzPY0HjhkgbgEULjduPKY3F2y/PZJo+7KxHgKf5LA8uaGwEYP9oAG80cTw+5EIjaUnezDLD6cs8oba2CPQ==
+  dependencies:
+    mobx "^5.15.4"
+    mobx-react "^6.2.1"
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"

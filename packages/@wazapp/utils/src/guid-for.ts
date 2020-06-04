@@ -21,9 +21,12 @@ class GuidController {
 
 let guidController: GuidController | undefined;
 
-export default function guidFor(value: any): string {
+export default function guidFor(value: any, suffix?: string): string {
   if (!guidController) throw new Error('Wazapp: GUID controller has not been setup.');
-  return guidController.generate(value);
+  
+  const guid =  guidController.generate(value);
+  
+  return suffix ? `${guid}-${suffix}` : guid;
 }
 
 export function setupGuid(): void {

@@ -5,11 +5,14 @@ import { setupGuid } from '@wazapp/utils';
 
 export const ContainerContext = createContext({});
 
+const createContainer = (container?: Container) => {
+  return container || new Container();
+}
+
 const Wazapp = ({ container, children }: { container?: Container, children: ReactNode }) => {
-  const appContainer = useMemo(() => container || new Container(), [container]);
-
+  const appContainer = useMemo(() => createContainer(container), [container]);
   useMemo(setupGuid, []);
-
+  
   return (
     <ContainerContext.Provider value={appContainer}>
       {children}
