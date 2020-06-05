@@ -5,7 +5,7 @@ function each<T>(collection: T[] | null | undefined, onItem: (item: T, index: nu
   if (collection && collection.length) {
     return collection.map((item: any, index: number) => {
       const children =  typeof onItem === 'function' ? onItem(item, index) : onItem;
-      return createElement(Fragment, { key: guidFor(item, index.toString(10)) }, children)
+      return createElement(Fragment, { key: guidFor(item, index) }, children)
     });
   }
 

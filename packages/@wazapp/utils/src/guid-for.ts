@@ -11,7 +11,7 @@ class GuidController {
     let guid = store.get(value);
 
     if (guid === undefined) {
-      guid = `guid-${++this.id}`
+      guid = `w:${(this.id++).toString(36)}`
       store.set(value, guid);
     }
   
@@ -21,7 +21,7 @@ class GuidController {
 
 let guidController: GuidController | undefined;
 
-export default function guidFor(value: any, suffix?: string): string {
+export default function guidFor(value: any, suffix?: string | number): string {
   if (!guidController) throw new Error('Wazapp: GUID controller has not been setup.');
   
   const guid =  guidController.generate(value);
