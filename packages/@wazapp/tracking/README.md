@@ -12,7 +12,7 @@ In most cases you will be only in touch with `action` and `tracked` as all Wazap
 The `action` will make sure that the function it's used on has been bind to current context.
 The `tracked` will make the property observed. Whenever it will change the component will rerender.
 
-## Example of usage
+#### Example of usage
 
 ```typescript
 import Component from "@wazapp/component";

@@ -12,13 +12,13 @@ Services are useful for features that require shared state or persistent connect
 - Third-party APIs.
 - Logging.
 
-# API
+## API
 
-## Service class
+### Service class
 
 The base class of the service.
 
-### Example
+#### Example
 
 ```typescript
 import Service from '@wazapp/service';
@@ -31,13 +31,13 @@ export default class AuthService extends Service {
 }
 ```
 
-## @service decorator
+### @service decorator
 
 To use services in other services or Wazapp component you can use `@service` decorator.
 
 Services are lazy loaded, so they are not instantiated until the first call.
 
-### Example
+#### Example
 
 ```typescript
 import Service from '@wazapp/service';

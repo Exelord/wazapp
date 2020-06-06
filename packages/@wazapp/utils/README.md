@@ -20,6 +20,7 @@ Properties:
 
 ```typescript
 import Component from "@wazapp/component";
+import { guidFor } from '@wazapp/utils'
 
 export default class FormComponent extends Component {
   template({ name }) {
