@@ -11,6 +11,7 @@ const createContainer = (container?: Container) => {
 
 const Wazapp = ({ container, children }: { container?: Container, children: ReactNode }) => {
   const appContainer = useMemo(() => createContainer(container), [container]);
+  
   useMemo(setupGuid, []);
   
   return (

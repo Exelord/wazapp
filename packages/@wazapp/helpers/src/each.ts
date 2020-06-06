@@ -2,7 +2,7 @@ import { createElement, Fragment, ReactNode } from "react";
 import { guidFor } from "@wazapp/utils";
 
 function each<T>(collection: T[] | null | undefined, onItem: (item: T, index: number) => any | any, onEmpty: any = null): ReactNode {
-  if (collection && collection.length) {
+  if (collection?.length) {
     const keys = new Set();
 
     return collection.map((item: any, index: number) => {
