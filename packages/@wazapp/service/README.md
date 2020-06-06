@@ -18,7 +18,7 @@ Services are useful for features that require shared state or persistent connect
 
 The base class of the service.
 
-#### Example
+### Example
 
 ```typescript
 import Service from '@wazapp/service';
@@ -37,7 +37,7 @@ To use services in other services or Wazapp component you can use `@service` dec
 
 Services are lazy loaded, so they are not instantiated until the first call.
 
-#### Example
+### Example
 
 ```typescript
 import Service from '@wazapp/service';
