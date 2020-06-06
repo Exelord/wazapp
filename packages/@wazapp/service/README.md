@@ -31,7 +31,7 @@ export default class AuthService extends Service {
 }
 ```
 
-### @service decorator
+## @service decorator
 
 To use services in other services or Wazapp component you can use `@service` decorator.
 
