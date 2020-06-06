@@ -11,9 +11,9 @@ Component package expose Wazapp Component which is built on top of React Compone
 import Component from "@wazapp/component";
 
 export default class MyComponent extends Component {
-  template() {
+  template({ name }) {
     return (
-      <h1>This is Wazapp component</h1>
+      <h1>Hello, {name}</h1>
     );
   }
 }
@@ -31,9 +31,9 @@ export default class MyComponent extends Component {
 
 ```typescript
 export default class MyComponent extends Component {
-  template() {
+  template({ name }) {
     return (
-      <h1>My name is {this.props.name}</h1>
+      <h1>My name is {name}</h1>
     );
   }
 }
@@ -57,11 +57,11 @@ A boolean to tell if the component has been fully unmounted. This is set to true
 
 ### Methods
 
-#### `template(props: P)`
+#### `template(props: P): ReactNode | void`
 
 `template(props)` allows you to define your component template written in JSX. Remember that you are still working in React so things like `className` instead of `class` are still required.
 
-The template can return `nil`, `undefined` or `ReactNode`. By default if not defined it will `yield()` component's `children`.
+The template can return `ReactNode` or nothing. By default if not defined it will `yield()` component's `children`.
 
 #### Example of usage
 
