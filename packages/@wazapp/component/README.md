@@ -30,6 +30,8 @@ export default class MyComponent extends Component {
 #### Example of usage
 
 ```typescript
+import Component from "@wazapp/component";
+
 export default class MyComponent extends Component {
   template({ name }) {
     return (
@@ -66,6 +68,8 @@ The template can return `ReactNode` or nothing. By default if not defined it wil
 #### Example of usage
 
 ```typescript
+import Component from "@wazapp/component";
+
 export default class MyComponent extends Component {
   template({ name }) {
     return (
@@ -85,6 +89,8 @@ export default class MyComponent extends Component {
 #### Example of usage
 
 ```typescript
+import Component from "@wazapp/component";
+
 export default class MyComponent extends Component {
   template() {
     return (
@@ -117,6 +123,8 @@ This method is a good place to set up any subscriptions. If you do that, don’t
 #### Example of usage
 
 ```typescript
+import Component from "@wazapp/component";
+
 export default class MyComponent extends Component {
   didMount() {
     console.log('Component has been mounted')
@@ -136,6 +144,8 @@ Use this as an opportunity to operate on the DOM when the component has been upd
 #### Example of usage
 
 ```typescript
+import Component from "@wazapp/component";
+
 export default class MyComponent extends Component {
   didUpdate(prevProps) {
     console.log(prevProps.name, this.props.name)
@@ -150,6 +160,8 @@ export default class MyComponent extends Component {
 #### Example of usage
 
 ```typescript
+import Component from "@wazapp/component";
+
 export default class MyComponent extends Component {
   willUnmount() {
     console.log('Component has been unmounted`)
