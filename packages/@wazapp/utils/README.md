@@ -2,21 +2,21 @@
 
 Utils are a bunch of functionalities that can make your life easier. They are used internally by Wazapp packages, but you are encourage to use them as well.
 
-# API
+## API
 
-## guidFor
+### guidFor
 
 Returns a unique id for the object. If the object does not yet have a guid, one will be assigned to it. You can call this on any object, string, number, whatever...
 
 You can also use this method on DOM Element objects.
 
-### API
+#### API
 
 Properties:
 - `value`: `any` - value for which the guid will be generated
 - `suffix`: `string` - optional suffix
 
-### Example
+#### Example
 
 ```typescript
 import Component from "@wazapp/component";
@@ -39,11 +39,11 @@ export default class FormComponent extends Component {
 // </form>
 ```
 
-## uuid
+### uuid
 
 Exposes: https://github.com/ai/nanoid
 
-### Example
+#### Example
 
 ```typescript
 import { uuid } from '@wazapp/utils'
