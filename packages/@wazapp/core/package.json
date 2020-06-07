@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@wazapp/core",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Core functionality",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
@@ -18,6 +18,6 @@
     "react": "^16.8.0"
   },
   "dependencies": {
-    "@wazapp/utils": "^0.5.0"
+    "@wazapp/utils": "^0.6.0"
   }
 }
