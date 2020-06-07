@@ -11,19 +11,11 @@
     "packages/@wazapp/*",
     "packages/examples/*"
   ],
-  "browserslist": {
-    "production": [
-      "last 2 Edge versions",
-      "last 2 Chrome versions",
-      "last 2 Firefox versions",
-      "last 2 Safari versions"
-    ],
-    "development": [
-      "last 1 Chrome version",
-      "last 1 Firefox version",
-      "last 1 Safari version"
-    ]
-  },
+  "browserslist": [
+    "defaults and > 0.2%",
+    "not IE 11",
+    "not op_mini all"
+  ],
   "scripts": {
     "build": "./scripts/build.js",
     "prepublishOnly": "scripts/build.js",
