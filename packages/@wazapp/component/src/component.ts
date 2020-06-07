@@ -1,6 +1,6 @@
 import { Component as ReactComponent, ReactNode } from 'react';
+import { observer } from 'mobx-react';
 import { OwnerContext, setOwner, Owner } from '@wazapp/core';
-import { observer } from '@wazapp/tracking';
 import { yieldChildren } from '@wazapp/helpers';
 
 @observer

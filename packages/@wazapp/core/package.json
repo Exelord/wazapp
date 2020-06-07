@@ -15,7 +15,8 @@
     "build": "webpack"
   },
   "peerDependencies": {
-    "react": "^16.8.0"
+    "react": "^16.8.0",
+    "mobx-react": "^6.2.1"
   },
   "dependencies": {
     "@wazapp/utils": "^0.6.0"
