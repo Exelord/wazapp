@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@wazapp/core",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Core functionality",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
@@ -15,10 +15,10 @@
     "build": "webpack"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "mobx-react": "^6.2.1"
+    "mobx-react": "^6.2.1",
+    "react": "^16.8.0"
   },
   "dependencies": {
-    "@wazapp/utils": "^0.6.0"
+    "@wazapp/utils": "^0.7.0"
   }
 }
