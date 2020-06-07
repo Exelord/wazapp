@@ -36,8 +36,6 @@ class GuidController {
 let guidController = new GuidController();
 
 export default function guidFor(value: any, suffix?: string | number): string {
-  if (!guidController) throw new Error('Wazapp: GUID controller has not been setup.');
-
   return guidController.for(value, suffix);
 }
 

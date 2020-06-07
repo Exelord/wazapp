@@ -2,6 +2,7 @@ import { Component as ReactComponent, ReactNode } from 'react';
 import { observer } from 'mobx-react';
 import { OwnerContext, setOwner, Owner } from '@wazapp/core';
 import { yieldChildren } from '@wazapp/helpers';
+import { runDisposers } from '@wazapp/utils';
 
 @observer
 class Component<P = {}> extends ReactComponent<P> {
@@ -51,6 +52,7 @@ class Component<P = {}> extends ReactComponent<P> {
     this.#isUnmounting = true;
     
     this.willUnmount();
+    runDisposers(this);
 
     this.#isUnmounting = false;
     this.#isUnmounted = true;

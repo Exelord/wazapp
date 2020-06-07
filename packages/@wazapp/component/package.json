@@ -17,6 +17,7 @@
   "dependencies": {
     "@wazapp/core": "^0.6.0",
     "@wazapp/helpers": "^0.6.0",
+    "@wazapp/utils": "^0.6.0",
     "mobx-react": "^6.2.1"
   },
   "peerDependencies": {
