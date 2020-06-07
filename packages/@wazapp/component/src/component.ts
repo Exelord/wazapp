@@ -1,9 +1,9 @@
 import { Component as ReactComponent, ReactNode } from 'react';
 import { ContainerContext, setContainer, Container } from '@wazapp/core';
-import { tracker } from '@wazapp/tracking';
+import { observer } from '@wazapp/tracking';
 import { yieldChildren } from '@wazapp/helpers';
 
-@tracker
+@observer
 class Component<P = {}> extends ReactComponent<P> {
   #isUnmounting = false;
   #isUnmounted = false;
