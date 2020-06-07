@@ -1,5 +1,5 @@
 import { Component as ReactComponent, ReactNode } from 'react';
-import { ContainerContext, setContainer, Container } from '@wazapp/core';
+import { OwnerContext, setOwner, Owner } from '@wazapp/core';
 import { observer } from '@wazapp/tracking';
 import { yieldChildren } from '@wazapp/helpers';
 
@@ -16,9 +16,9 @@ class Component<P = {}> extends ReactComponent<P> {
     return this.#isUnmounted;
   }
 
-  constructor(props: P, context: Container) {
-    super(props, context);
-    setContainer(this, context);
+  constructor(props: P, owner: Owner) {
+    super(props, owner);
+    setOwner(this, owner);
   }
 
   didMount(): void {}
@@ -57,6 +57,6 @@ class Component<P = {}> extends ReactComponent<P> {
   }
 }
 
-Object.defineProperty(Component, 'contextType', { value: ContainerContext });
+Object.defineProperty(Component, 'contextType', { value: OwnerContext });
 
 export default Component;

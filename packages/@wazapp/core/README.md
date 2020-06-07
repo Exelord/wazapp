@@ -1,6 +1,6 @@
 # @wazapp/core
 
-The core is the main element of Wazapp application. It delivers `<App />` component which creates app's `Container`. It use used to keep all your singleton instances, eg. `Services`.
+The core is the main element of Wazapp application. It delivers `<App />` component which creates app's `Owner`. It use used to keep all your singleton instances, eg. `Services`.
 
 ## API
 
@@ -8,7 +8,7 @@ The core is the main element of Wazapp application. It delivers `<App />` compon
 
 The App component will integrate your app with Wazapp. Make sure to wrap your top level component with it.
 
-Optionally, you can pass your own `Container` instance to it, using `container` property.
+Optionally, you can pass your own `Owner` instance to it, using `owner` property.
 
 #### Example
 
@@ -24,12 +24,12 @@ const MyApp = () => (
 export default MyApp;
 ```
 
-### Container
+### Owner
 
-The containers serves as a global registry for your application.
+The owner serves as a global registry for your application.
 It exposes two methods: `lookup` and `register`. Usually, you dont need to worry about them but may become hand if you would like to pre initialize your own service.
 
-Container is used by `@wazapp/component` to access and lazy instantiate services.
+Owner is used by `@wazapp/component` to access and lazy instantiate services.
 
 #### Methods
 
@@ -45,7 +45,7 @@ class MySingleton {
   }
 }
 
-container.register(MySingleton, new MySingleton({ hey: 'wazapp' }));
+owner.register(MySingleton, new MySingleton({ hey: 'wazapp' }));
 
-const mySingletonInstance = container.lookup(MySingleton);
+const mySingletonInstance = owner.lookup(MySingleton);
 ```

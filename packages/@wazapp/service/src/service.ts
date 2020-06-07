@@ -1,7 +1,7 @@
-import { Container, setContainer } from '@wazapp/core';
+import { Owner, setOwner } from '@wazapp/core';
 
 export default class Service {
-  constructor(container: Container) {
-    setContainer(this, container);
+  constructor(owner: Owner) {
+    setOwner(this, owner);
   }
 };

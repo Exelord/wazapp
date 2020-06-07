@@ -1,2 +1,2 @@
-export { Container, getContainer, setContainer } from './src/container';
-export { default as App, ContainerContext } from './src/app';
+export { Owner, getOwner, setOwner } from './src/owner';
+export { default as App, OwnerContext } from './src/app';

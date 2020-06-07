@@ -1,12 +1,12 @@
-const containerMap = new WeakMap();
+const ownerMap = new WeakMap();
 
-function missingContainer(target: any) {
+function missingOwner(target: any) {
   throw new Error(`wazapp: You need to extend your component '${target.constructor.name}'\
                    with a wazapp 'Component' and make sure your app in wrapped with wazapp\
                    App in order to be able to inject services.`)
 }
 
-export class Container {
+export class Owner {
   private registry = new Map();
 
   lookup<T>(key: any): T {
@@ -19,12 +19,12 @@ export class Container {
   }
 }
 
-export function getContainer(target: any): Container {
-  const container = containerMap.get(target);
+export function getOwner(target: any): Owner {
+  const owner = ownerMap.get(target);
 
-  return container || missingContainer(target);
+  return owner || missingOwner(target);
 }
 
-export function setContainer(target: any, container: Container): void {
-  containerMap.set(target, container);
+export function setOwner(target: any, owner: Owner): void {
+  ownerMap.set(target, owner);
 }

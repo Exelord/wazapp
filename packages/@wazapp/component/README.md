@@ -1,6 +1,6 @@
 # @wazapp/component
 
-Component package expose Wazapp Component which is built on top of React Component. It integrates tracking, app container (allows to use services) and simplify component API.
+Component package expose Wazapp Component which is built on top of React Component. It integrates tracking, app owner (allows to use services) and simplify component API.
 
 > ### Warning!
 > **Hence the component extends from React Component, do not use any of its API. It may be removed in the future and using it may cause incompatibility with Wazapp components!**

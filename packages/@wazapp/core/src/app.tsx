@@ -1,23 +1,23 @@
 import React, { ReactNode } from 'react';
 import { createContext, useMemo } from 'react';
-import { Container } from './container';
+import { Owner } from './owner';
 import { setupGuid } from '@wazapp/utils';
 
-export const ContainerContext = createContext({});
+export const OwnerContext = createContext({});
 
-const createContainer = (container?: Container) => {
-  return container || new Container();
+const createOwner = (owner?: Owner) => {
+  return owner || new Owner();
 }
 
-const Wazapp = ({ container, children }: { container?: Container, children: ReactNode }) => {
-  const appContainer = useMemo(() => createContainer(container), [container]);
+const Wazapp = ({ owner, children }: { owner?: Owner, children: ReactNode }) => {
+  const appOwner = useMemo(() => createOwner(owner), [owner]);
   
   useMemo(setupGuid, []);
   
   return (
-    <ContainerContext.Provider value={appContainer}>
+    <OwnerContext.Provider value={appOwner}>
       {children}
-    </ContainerContext.Provider>
+    </OwnerContext.Provider>
   )
 }
 
