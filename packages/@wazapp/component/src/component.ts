@@ -54,8 +54,8 @@ class Component<P = {}> extends ReactComponent<P> {
     this.willUnmount();
     runDisposers(this);
 
-    this.#isUnmounting = false;
     this.#isUnmounted = true;
+    this.#isUnmounting = false;
   }
 }
 
