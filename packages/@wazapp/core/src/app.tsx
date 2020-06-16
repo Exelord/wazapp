@@ -1,21 +1,15 @@
-import 'mobx-react/batchingForReactDom';
-import { useStaticRendering } from "mobx-react"
-import React, { ReactNode } from 'react';
-import { createContext, useMemo } from 'react';
+import './setup-mobx';
+
+import React, { ReactNode, useMemo } from 'react';
+import OwnerContext from './context';
 import { Owner } from './owner';
 import { setupGuid } from '@wazapp/utils';
-
-export const OwnerContext = createContext({});
 
 const createOwner = (owner?: Owner) => {
   return owner || new Owner();
 }
 
 const Wazapp = ({ owner, children }: { owner?: Owner, children: ReactNode }) => {
-  if (typeof window === 'undefined') {
-    useStaticRendering(true);
-  }
-
   const appOwner = useMemo(() => createOwner(owner), [owner]);
   
   useMemo(setupGuid, []);

@@ -19,12 +19,12 @@ export class Owner {
   }
 }
 
-export function getOwner(target: any): Owner {
+export function getOwner(target: object): Owner {
   const owner = ownerMap.get(target);
 
   return owner || missingOwner(target);
 }
 
-export function setOwner(target: any, owner: Owner): void {
+export function setOwner(target: object, owner: Owner): void {
   ownerMap.set(target, owner);
 }

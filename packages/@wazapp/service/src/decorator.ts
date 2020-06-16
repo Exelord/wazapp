@@ -8,7 +8,7 @@ export function service<T extends Service>(serviceClass: new(owner: Owner) => T)
       configurable: false,
 
       get(): T {
-        const owner = getOwner(this);
+        const owner = getOwner(this as unknown as object);
         const service = owner.lookup<T>(serviceClass);
         return service || owner.register(serviceClass, new serviceClass(owner));
       }
