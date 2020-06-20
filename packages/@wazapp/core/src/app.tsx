@@ -1,5 +1,3 @@
-import './setup-mobx';
-
 import React, { ReactNode, useMemo } from 'react';
 import OwnerContext from './context';
 import { Owner } from './owner';

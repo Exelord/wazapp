@@ -15,7 +15,6 @@
     "build": "webpack"
   },
   "peerDependencies": {
-    "mobx-react": "^6.2.1",
     "react": "^16.8.0"
   },
   "dependencies": {
