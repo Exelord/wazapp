@@ -39,6 +39,6 @@ export default function guidFor(value: any, suffix?: string | number): string {
   return guidController.for(value, suffix);
 }
 
-export function setupGuid(): void {
+export function resetGuid(): void {
   guidController = new GuidController();
 }

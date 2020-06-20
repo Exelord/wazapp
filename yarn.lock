@@ -2498,53 +2498,6 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@wazapp/component@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/component/-/component-0.8.0.tgz#7abd168e3bd2db4f70300944bf456d72879d78b3"
-  integrity sha512-uUunpkvpMBG2GXXc/8uZH/1MBFeod42CbSM8J07S2NulyuezHqN9xymRUv51b3MaaPd+a9kGdeCQfAr0ghouzA==
-  dependencies:
-    "@wazapp/core" "^0.8.0"
-    "@wazapp/helpers" "^0.8.0"
-    "@wazapp/utils" "^0.8.0"
-    mobx-react "^6.2.1"
-    mobx-react-lite "^2.0.7"
-
-"@wazapp/core@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/core/-/core-0.8.0.tgz#7bd0a12c73a529968b4071dd9edf60b887b6fbbd"
-  integrity sha512-Mm4eU+e6/BP/RXnILpmv+S1IrnhoPpfQ7THxshrQGUciwT3LYNqapFpGU5bBzq8TyrSGWGviwMU+mTX93raOcg==
-  dependencies:
-    "@wazapp/utils" "^0.8.0"
-
-"@wazapp/helpers@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/helpers/-/helpers-0.8.0.tgz#d2ac310981a08f875a811c0adf662e2f0b42d993"
-  integrity sha512-EDRttzjwBXEpZDkKX3PpenjKML5pUpxG7smtqGhWh5Batn6Yu4ELMLcAJvric4UqzprZchYlGd7swdllasM8Ig==
-  dependencies:
-    "@wazapp/utils" "^0.8.0"
-    classnames "^2.2.6"
-
-"@wazapp/service@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/service/-/service-0.8.0.tgz#b79c33f3d2ff22959fc1e4867ae5f009451a5ad6"
-  integrity sha512-maxdxwaOKd7GxURKsmvUO7Fou7qUmyOXOhxx26+vIFjRkjem+/l8YFMBy9rPIwLZ9bXCxhpYlFhA1RgqWXH5LQ==
-  dependencies:
-    "@wazapp/core" "^0.8.0"
-
-"@wazapp/tracking@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/tracking/-/tracking-0.8.0.tgz#194e2744b0ec804683f203e115a5dee8ab8defee"
-  integrity sha512-47QauwYhUJk/No6REenXELrcH44izcQ0J+Hz9mXtsXUDoQhgIUfjum5WUVsg4dNm3tycvVDzsFXTEmkAPUn8wA==
-  dependencies:
-    mobx "^5.15.4"
-
-"@wazapp/utils@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/utils/-/utils-0.8.0.tgz#da13b18f101792c88373b8f9ca49946d744f9874"
-  integrity sha512-644mHF+9xaMcHOALqURQIgjupL3emZsZTywnG/HPmnFZIonCnGcxV9+2rLig5WXcajMcvcyvQ3UbeStQPuCCeA==
-  dependencies:
-    nanoid "^3.1.9"
-
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"

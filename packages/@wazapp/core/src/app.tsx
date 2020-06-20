@@ -1,7 +1,7 @@
 import React, { ReactNode, useMemo } from 'react';
 import OwnerContext from './context';
 import { Owner } from './owner';
-import { setupGuid } from '@wazapp/utils';
+import { resetGuid } from '@wazapp/utils';
 
 const createOwner = (owner?: Owner) => {
   return owner || new Owner();
@@ -10,7 +10,7 @@ const createOwner = (owner?: Owner) => {
 const Wazapp = ({ owner, children }: { owner?: Owner, children: ReactNode }) => {
   const appOwner = useMemo(() => createOwner(owner), [owner]);
   
-  useMemo(setupGuid, []);
+  useMemo(resetGuid, []);
   
   return (
     <OwnerContext.Provider value={appOwner}>
