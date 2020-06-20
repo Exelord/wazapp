@@ -9,7 +9,7 @@
   "main": "dist/index.js",
   "workspaces": [
     "packages/@wazapp/*",
-    "packages/examples/*"
+    "examples/*"
   ],
   "browserslist": [
     "last 2 Chrome major versions",

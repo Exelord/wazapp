@@ -35,7 +35,7 @@
   "exclude": [
     "node_modules",
     "scripts",
-    "packages/examples",
+    "examples",
     "packages/**/dist",
     "dist"
   ]
