@@ -1,6 +1,6 @@
-const { Command } = require('commander');
-const packageJson = require('./package.json');
-const child_process = require('child_process');
+import { Command } from 'commander';
+import packageJson from './package.json';
+import child_process from 'child_process';
 
 const program = new Command(packageJson.name);
 
@@ -11,7 +11,7 @@ const defaultFramework = 'nextjs';
 
 const supportedFrameworks = {
   nextjs: createNextApp
-};
+} as { [key: string]: (dir: string) => void; };
 
 program
   .version(packageJson.version)
@@ -28,7 +28,7 @@ program
   .allowUnknownOption()
   .parse(process.argv);
 
-function createNextApp(dir) {
+function createNextApp(dir: string) {
   const ls = child_process.spawn('create-next-app', [dir, `-e ${repo}`, `--example-path=${path}`]);
 
   ls.stdout.on('data', (data) => console.log(`${data}`));

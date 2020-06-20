@@ -11,13 +11,22 @@
     "directory": "packages/create-wazapp"
   },
   "scripts": {
-    "create-wazapp": "node index.js"
+    "build": "ncc build ./index.ts -w -o dist/",
+    "prerelease": "rimraf ./dist/",
+    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
+    "prepublish": "yarn release"
   },
   "bin": {
     "create-wazapp": "./index.js"
   },
   "dependencies": {
-    "commander": "^5.1.0",
     "create-next-app": "^9.4.4"
+  },
+  "devDependencies": {
+    "commander": "^5.1.0",
+    "@zeit/ncc": "^0.22.3",
+    "@types/node": "^14.0.13",
+    "rimraf": "3.0.2",
+    "typescript": "3.9.5"
   }
 }
