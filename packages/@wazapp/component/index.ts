@@ -1,3 +1,10 @@
-import Component from './src/component'
+import ClassComponent from './src/class-component';
+import FunctionComponent from './src/function-component';
+import { useLocalStore, useAsObservableSource } from 'mobx-react-lite';
 
-export default Component;
+export {
+  ClassComponent,
+  FunctionComponent,
+  useLocalStore,
+  useAsObservableSource
+}

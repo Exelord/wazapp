@@ -1,11 +1,17 @@
-import { Component as ReactComponent, ReactNode } from 'react';
-import { observer } from 'mobx-react';
+import 'mobx-react/batchingForReactDom';
+
+import { PureComponent, ReactNode } from 'react';
+import { observer, useStaticRendering } from 'mobx-react';
 import { OwnerContext, setOwner, Owner } from '@wazapp/core';
 import { yieldChildren } from '@wazapp/helpers';
 import { runDisposers } from '@wazapp/utils';
 
+if (typeof window === 'undefined') {
+  useStaticRendering(true);
+};
+
 @observer
-class Component<P = {}> extends ReactComponent<P> {
+class Component<P = {}> extends PureComponent<P> {
   #isUnmounting = false;
   #isUnmounted = false;
 
@@ -26,7 +32,7 @@ class Component<P = {}> extends ReactComponent<P> {
   didUpdate(_prevProps: any): void {}
   willUnmount(): void {}
 
-  template(_props: P): ReactNode | void {
+  template(_props: P, _self: this): ReactNode | void {
     return this.yield();
   }
 
@@ -37,7 +43,7 @@ class Component<P = {}> extends ReactComponent<P> {
   // React Overrides - DO NOT USE
 
   render(): ReactNode {
-    return this.template(this.props) || null;
+    return this.template(this.props, this) || null;
   }
 
   componentDidMount(): void {

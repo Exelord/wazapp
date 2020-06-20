@@ -8,9 +8,9 @@ Component package expose Wazapp Component which is built on top of React Compone
 ### Example of usage
 
 ```typescript
-import Component from "@wazapp/component";
+import { ClassComponent } from "@wazapp/component";
 
-export default class MyComponent extends Component {
+export default class MyComponent extends ClassComponent {
   template({ name }) {
     return (
       <h1>Hello, {name}</h1>
@@ -19,7 +19,7 @@ export default class MyComponent extends Component {
 }
 ```
 
-## API
+## Class Component
 
 ### `props`
 
@@ -28,9 +28,9 @@ export default class MyComponent extends Component {
 #### Example of usage
 
 ```typescript
-import Component from "@wazapp/component";
+import { ClassComponent } from "@wazapp/component";
 
-export default class MyComponent extends Component {
+export default class MyComponent extends ClassComponent {
   template({ name }) {
     return (
       <h1>My name is {name}</h1>
@@ -38,7 +38,7 @@ export default class MyComponent extends Component {
   }
 }
 
-export default class MainComponent extends Component {
+export default class MainComponent extends ClassComponent {
   template() {
     return (
       <MyComponent name="Wazapp" />
@@ -55,7 +55,7 @@ A boolean flag to tell if the component is in the process of unmounting. This is
 
 A boolean to tell if the component has been fully unmounted. This is set to true after `willUnmount` is called.
 
-### `template(props: P): ReactNode | void`
+### `template(props: P, context: this): ReactNode | void`
 
 `template(props)` allows you to define your component template written in JSX. Remember that you are still working in React so things like `className` instead of `class` are still required.
 
@@ -64,9 +64,9 @@ The template can return `ReactNode` or nothing. By default if not defined it wil
 #### Example of usage
 
 ```typescript
-import Component from "@wazapp/component";
+import { ClassComponent } from "@wazapp/component";
 
-export default class MyComponent extends Component {
+export default class MyComponent extends ClassComponent {
   template({ name }) {
     return (
       <h1>Hello {name}, this is Wazapp component</h1>
@@ -85,9 +85,9 @@ export default class MyComponent extends Component {
 #### Example of usage
 
 ```typescript
-import Component from "@wazapp/component";
+import { ClassComponent } from "@wazapp/component";
 
-export default class MyComponent extends Component {
+export default class MyComponent extends ClassComponent {
   template() {
     return (
       <h1>Hello, {this.yield('Wazapp')}</h1>
@@ -95,7 +95,7 @@ export default class MyComponent extends Component {
   }
 }
 
-export default class MainComponent extends Component {
+export default class MainComponent extends ClassComponent {
   template() {
     return (
       <MyComponent>
@@ -117,9 +117,9 @@ This method is a good place to set up any subscriptions. If you do that, don’t
 #### Example of usage
 
 ```typescript
-import Component from "@wazapp/component";
+import { ClassComponent } from "@wazapp/component";
 
-export default class MyComponent extends Component {
+export default class MyComponent extends ClassComponent {
   didMount() {
     console.log('Component has been mounted')
   }
@@ -138,9 +138,9 @@ Use this as an opportunity to operate on the DOM when the component has been upd
 #### Example of usage
 
 ```typescript
-import Component from "@wazapp/component";
+import { ClassComponent } from "@wazapp/component";
 
-export default class MyComponent extends Component {
+export default class MyComponent extends ClassComponent {
   didUpdate(prevProps) {
     console.log(prevProps.name, this.props.name)
   }
@@ -154,9 +154,9 @@ export default class MyComponent extends Component {
 #### Example of usage
 
 ```typescript
-import Component from "@wazapp/component";
+import { ClassComponent } from "@wazapp/component";
 
-export default class MyComponent extends Component {
+export default class MyComponent extends ClassComponent {
   willUnmount() {
     console.log('Component has been unmounted`)
   }
