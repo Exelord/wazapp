@@ -16,6 +16,9 @@
     "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
     "prepublish": "yarn release"
   },
+  "files": [
+    "dist"
+  ],
   "bin": {
     "create-wazapp": "./index.js"
   },
