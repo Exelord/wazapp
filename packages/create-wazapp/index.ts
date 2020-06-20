@@ -5,7 +5,7 @@ import child_process from 'child_process';
 const program = new Command(packageJson.name);
 
 const repo = 'https://github.com/Wazappjs/wazapp';
-const path = 'packages/blueprints/nextjs';
+const path = 'blueprints/nextjs';
 
 const defaultFramework = 'nextjs';
 
