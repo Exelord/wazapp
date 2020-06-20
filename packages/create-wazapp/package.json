@@ -1,0 +1,23 @@
+{
+  "private": false,
+  "name": "create-wazapp",
+  "version": "0.0.0",
+  "description": "Create Wazapp",
+  "license": "MIT",
+  "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wazappjs/wazapp",
+    "directory": "packages/create-wazapp"
+  },
+  "scripts": {
+    "create-wazapp": "node index.js"
+  },
+  "bin": {
+    "create-wazapp": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^5.1.0",
+    "create-next-app": "^9.4.4"
+  }
+}
