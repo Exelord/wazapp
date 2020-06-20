@@ -1,14 +1,18 @@
 import { FunctionComponent } from 'react';
-import TodoList from "@src/components/todo-list";
-import UserProfile from '@src/components/user-profile';
+import Link from 'next/link';
 
 export type IndexPageProps = {}
 
 const IndexPage: FunctionComponent<IndexPageProps> = () => {
   return (
     <>
-      <UserProfile />
-      <TodoList />
+      <Link href="/examples/class-todos">
+        <a>Class Todos</a>
+      </Link>
+
+      <Link href="/examples/function-todos">
+        <a>Function Todos</a>
+      </Link>
     </>
   )
 }
