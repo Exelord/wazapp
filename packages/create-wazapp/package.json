@@ -20,7 +20,7 @@
     "dist"
   ],
   "bin": {
-    "create-wazapp": "./index.js"
+    "create-wazapp": "./dist/index.js"
   },
   "dependencies": {
     "create-next-app": "^9.4.4"
