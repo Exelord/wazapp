@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import packageJson from './package.json';
+import { name as packageName, version as packageVersion } from './package.json';
 import child_process from 'child_process';
 
-const program = new Command(packageJson.name);
+const program = new Command(packageName);
 
 const repo = 'https://github.com/Wazappjs/wazapp';
 const path = 'blueprints/nextjs';
@@ -16,7 +16,7 @@ const supportedFrameworks = {
 } as { [key: string]: (dir: string) => void; };
 
 program
-  .version(packageJson.version)
+  .version(packageVersion)
   .arguments('<project-directory>')
   .option('-f, --framework <framework>', 'Available frameworks: nextjs')
   .action((dir) => {
