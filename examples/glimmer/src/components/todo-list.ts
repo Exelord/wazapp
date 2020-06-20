@@ -1,37 +1,26 @@
 import Component, { hbs } from '@glimmerx/component';
-import { on, action } from '@glimmerx/modifier';
-import { service } from '@glimmerx/service';
+import { action } from '@glimmerx/modifier';
 
 import Todo from './todo';
-import TodosService from 'src/services/todos';
+import { TodoItem } from './todos';
 
-export default class TodoList extends Component {
-  @service('todos') todosService!: TodosService;
+type TodoListArgs = {
+  todoItems: TodoItem[];
+}
 
+export default class TodoList extends Component<TodoListArgs> {
   static template = hbs`
-    <div>
-      <button {{on "click" this.add}}>Add</button>
-      <button {{on "click" this.reset}}>Reset</button>
-
-      {{this.todosService.todos.length}} : {{this.todosService.done}}
-
-      <ul>
-        {{#each this.todosService.todos as |todo|}}
-          <li>
-            <Todo @todo={{todo}} />
-          </li>
-        {{/each}}
-      </ul>
-    </div>
+    <ul>
+      {{#each @todoItems as |todo|}}
+        <li>
+          <Todo @todoItem={{todo}} @onRemove={{this.removeTodo}} />
+        </li>
+      {{/each}}
+    </ul>
   `;
 
   @action
-  add() {
-    this.todosService.add();
-  }
-
-  @action
-  reset() {
-    this.todosService.reset();
+  removeTodo(todoItem: TodoItem) {
+    this.args.todoItems.remove(todoItem);
   }
 }

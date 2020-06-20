@@ -1,8 +1,8 @@
 import Component, { hbs } from '@glimmerx/component';
-import TodoList from './components/todo-list';
+import Todos from './components/todos';
 
 export default class AppComponent extends Component {
   static template = hbs`
-    <TodoList />
+    <Todos />
   `;
 }
