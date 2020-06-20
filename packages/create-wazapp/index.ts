@@ -6,14 +6,11 @@ import child_process from 'child_process';
 
 const program = new Command(packageName);
 
-const repo = 'https://github.com/Wazappjs/wazapp';
-const path = 'blueprints/nextjs';
-
 const defaultFramework = 'nextjs';
 
 const supportedFrameworks = {
   nextjs: createNextApp
-} as { [key: string]: (dir: string) => void; };
+} as { [key: string]: (name: string) => void; };
 
 program
   .version(packageVersion)
@@ -30,8 +27,11 @@ program
   .allowUnknownOption()
   .parse(process.argv);
 
-function createNextApp(dir: string) {
-  const ls = child_process.spawn('create-next-app', [dir, `-e ${repo}`, `--example-path=${path}`]);
+function createNextApp(name: string) {
+  const repo = 'https://github.com/Wazappjs/wazapp';
+  const path = 'blueprints/nextjs';
+  
+  const ls = child_process.spawn('create-next-app', [name, `-e`, repo, `--example-path`, path]);
 
   ls.stdout.on('data', (data) => console.log(`${data}`));
   ls.stderr.on('data', (data) => console.error(`${data}`));
