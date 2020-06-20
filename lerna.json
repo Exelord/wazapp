@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/@wazapp/*"
+    "packages/@wazapp/*",
+    "examples/nextjs"
   ],
   "version": "0.9.0"
 }
