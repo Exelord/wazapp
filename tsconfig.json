@@ -36,7 +36,9 @@
     "node_modules",
     "scripts",
     "examples",
+    "blueprints",
     "packages/**/dist",
+    "packages/create-wazapp",
     "dist"
   ]
 }
