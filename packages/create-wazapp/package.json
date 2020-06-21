@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "create-wazapp",
-  "version": "0.10.5",
+  "version": "0.10.6",
   "description": "Create Wazapp",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
@@ -25,8 +25,8 @@
   "devDependencies": {
     "@types/node": "^14.0.13",
     "@zeit/ncc": "^0.22.3",
-    "create-next-app": "^9.4.4",
     "commander": "^5.1.0",
+    "create-next-app": "^9.4.4",
     "rimraf": "3.0.2",
     "typescript": "3.9.5"
   }
