@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "create-wazapp",
-  "version": "0.10.7",
+  "version": "0.10.8",
   "description": "Create Wazapp",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
