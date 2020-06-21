@@ -1,5 +1,3 @@
-import { FunctionComponent } from '@wazapp/component'
-
 const IndexPage: React.FunctionComponent = () => {
   return (
     <div style={{ textAlign: 'center', backgroundColor: 'BlueViolet', color: 'white', padding: '100px' }}>
@@ -23,4 +21,4 @@ const IndexPage: React.FunctionComponent = () => {
   )
 }
 
-export default FunctionComponent(IndexPage);
+export default IndexPage;
