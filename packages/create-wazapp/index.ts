@@ -31,7 +31,7 @@ function createNextApp(name: string) {
   const repo = 'https://github.com/Wazappjs/wazapp';
   const path = 'blueprints/nextjs';
 
-  const ls = child_process.spawn('yarn create next-app', [name, `-e`, repo, `--example-path`, path]);
+  const ls = child_process.spawn('yarn', ['create', 'next-app', name, `-e`, repo, `--example-path`, path]);
 
   ls.stdout.on('data', (data) => console.log(`${data}`));
   ls.stderr.on('data', (data) => console.error(`${data}`));
