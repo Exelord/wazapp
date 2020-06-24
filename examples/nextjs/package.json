@@ -1,6 +1,6 @@
 {
   "name": "nextjs-example",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@wazapp/component": "^0.11.0",
+    "@wazapp/component": "^0.11.1",
     "@wazapp/core": "^0.11.0",
     "@wazapp/helpers": "^0.11.0",
     "@wazapp/service": "^0.11.0",
