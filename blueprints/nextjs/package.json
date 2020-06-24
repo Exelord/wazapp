@@ -11,7 +11,7 @@
   "dependencies": {
     "@wazapp/core": "^0.11.0",
     "@wazapp/tracking": "^0.11.0",
-    "@wazapp/component": "^0.11.0",
+    "@wazapp/component": "^0.11.1",
     "@wazapp/service": "^0.11.0",
     "@wazapp/helpers": "^0.11.0",
     "@wazapp/utils": "^0.11.0",
