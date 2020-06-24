@@ -1,6 +1,7 @@
 {
   "packages": [
     "packages/@wazapp/*",
+    "blueprints/*",
     "examples/nextjs"
   ],
   "version": "0.11.1"
