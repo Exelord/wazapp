@@ -1,6 +1,5 @@
 import { ClassComponent } from "@wazapp/component";
-import { registerDisposer } from '@wazapp/utils';
-import { observable, action, observe } from "@wazapp/tracking";
+import { observable, action } from "@wazapp/tracking";
 
 import TodoList from "@src/components/class-todos/list";
 import CreateForm from "@src/components/class-todos/create-form";
@@ -14,16 +13,6 @@ export type TodoItem = {
 
 export default class Todos extends ClassComponent {
   @observable todoItems: TodoItem[] = []
-
-  // didMount() {
-  //   super.didMount();
-
-  //   this.todoItems = JSON.parse(window.localStorage.getItem('todos') || '[]');
-
-  //   registerDisposer(this, observe(this.todoItems, () => {
-  //     window.localStorage.setItem('todos', JSON.stringify(this.todoItems));
-  //   }));
-  // }
 
   template({}, { addTodo, todoItems }: this) {
     return (
@@ -44,7 +33,7 @@ export default class Todos extends ClassComponent {
 
   @action
   addMany() {
-    const todos = [ ...Array(10000)].map((v,i) => ({ title: `${i}`, done: false } as TodoItem));
+    const todos = [ ...Array(500)].map((v,i) => ({ title: `${i}`, done: false } as TodoItem));
     this.todoItems.push(...todos)
   }
 

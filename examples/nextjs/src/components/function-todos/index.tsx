@@ -1,11 +1,9 @@
 import { FunctionComponent, useLocalStore } from "@wazapp/component";
-import { observe } from "@wazapp/tracking";
 
 import TodoList from "@src/components/function-todos/list";
 import CreateForm from "@src/components/function-todos/create-form";
 
 import styles from './styles.module.css';
-import { useEffect } from "react";
 
 export type TodoItem = {
   title: string;
@@ -28,7 +26,7 @@ const Todos: React.FunctionComponent = () => {
     },
 
     addMany() {
-      const todos = [ ...Array(10000)].map((v,i) => ({ title: `${i}`, done: false } as TodoItem));
+      const todos = [ ...Array(500)].map((v,i) => ({ title: `${i}`, done: false } as TodoItem));
       this.todoItems.push(...todos)
     },
 
@@ -36,14 +34,6 @@ const Todos: React.FunctionComponent = () => {
       this.todoItems = []
     }
   }));
-
-  // useEffect(() => {
-  //   store.todoItems = JSON.parse(window.localStorage.getItem('todos') || '[]');
-
-  //   return observe(store.todoItems, () => {
-  //     window.localStorage.setItem('todos', JSON.stringify(store.todoItems));
-  //   })
-  // }, [])
 
   return (
     <div className={styles.todos}>
