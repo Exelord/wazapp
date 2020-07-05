@@ -13,6 +13,7 @@ export type TodoItem = {
 type LocalStore = {
   todoItems: TodoItem[];
   addTodo(todoItem: TodoItem): void;
+  removeTodo(todoItem: TodoItem): void;
   addMany(): void;
   clear(): void;
 }
@@ -30,6 +31,10 @@ const Todos: React.FunctionComponent = () => {
       this.todoItems.push(...todos)
     },
 
+    removeTodo(todoItem: TodoItem) {
+      this.todoItems = this.todoItems.filter(todo => todo !== todoItem);
+    },
+
     clear() {
       this.todoItems = []
     }
@@ -41,7 +46,7 @@ const Todos: React.FunctionComponent = () => {
       <button onClick={store.addMany}>Add 500</button>
       <button onClick={store.clear}>Clear</button>
       <CreateForm onCreate={store.addTodo} />
-      <TodoList todoItems={store.todoItems} />
+      <TodoList todoItems={store.todoItems} onRemove={store.removeTodo} />
     </div>
   );
 }

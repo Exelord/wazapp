@@ -12,16 +12,16 @@ export type TodoItem = {
 }
 
 export default class Todos extends ClassComponent {
-  @observable todoItems: TodoItem[] = []
+  @observable todoItems: TodoItem[] = [];
 
-  template({}, { addTodo, todoItems }: this) {
+  template({}, { todoItems, addTodo, removeTodo }: this) {
     return (
       <div className={styles.todos}>
         Count: {this.todoItems.length}
         <button onClick={this.addMany}>Add 500</button>
         <button onClick={this.clear}>Clear</button>
         <CreateForm onCreate={addTodo} />
-        <TodoList todoItems={todoItems} />
+        <TodoList todoItems={todoItems} onRemove={removeTodo} />
       </div>
     );
   }
@@ -29,6 +29,11 @@ export default class Todos extends ClassComponent {
   @action
   addTodo(todoItem: TodoItem) {
     this.todoItems.push(todoItem);
+  }
+
+  @action
+  removeTodo(todoItem: TodoItem) {
+    this.todoItems = this.todoItems.filter(todo => todo !== todoItem);
   }
 
   @action
