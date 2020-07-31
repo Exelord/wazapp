@@ -9,7 +9,7 @@ function missingOwner(target: any) {
 export class Owner {
   private registry = new Map();
 
-  lookup<T>(key: any): T {
+  lookup<T>(key: any): T | undefined {
     return this.registry.get(key);
   }
 
