@@ -11,17 +11,11 @@ type FormObject = {
   [key: string]: any;
 }
 
-type LocalStore = {
-  formObject: FormObject;
-  addTodo(event: FormEvent<HTMLFormElement>): void;
-  onChange(event: ChangeEvent<HTMLInputElement>): void;
-}
-
 const CreateForm: React.FunctionComponent<CreateFormProps> = (props) => {
-  const store = useLocalStore<LocalStore>(() => ({
+  const store = useLocalStore(() => ({
     formObject: {
       title: ''
-    },
+    } as FormObject,
 
     addTodo(event: FormEvent<HTMLFormElement>) {
       event.preventDefault();
