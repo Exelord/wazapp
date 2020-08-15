@@ -1,3 +1,5 @@
-export default function when(a: any, b: any, c: any = null): any {
+import { ReactNode } from "react";
+
+export default function when<T>(a: T, b: T, c: T | null = null): ReactNode {
   return a ? b : c;
 }
