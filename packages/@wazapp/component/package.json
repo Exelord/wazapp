@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@wazapp/component",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Base component class",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
@@ -15,9 +15,9 @@
     "build": "webpack"
   },
   "dependencies": {
-    "@wazapp/core": "^0.11.0",
-    "@wazapp/helpers": "^0.11.0",
-    "@wazapp/utils": "^0.11.0",
+    "@wazapp/core": "^0.11.2",
+    "@wazapp/helpers": "^0.11.2",
+    "@wazapp/utils": "^0.11.2",
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.1",
     "mobx-react-lite": "^2.0.7"
