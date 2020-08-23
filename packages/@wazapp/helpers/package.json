@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@wazapp/helpers",
-  "version": "0.11.3",
+  "version": "0.11.4",
   "description": "Basic helpers",
   "license": "MIT",
   "author": "Maciej Kwaśniak <kmaciek17@gmail.com>",
