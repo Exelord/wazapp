@@ -2,7 +2,7 @@ import { AppProps } from 'next/app';
 import { FunctionComponent } from 'react';
 import { App as Wazapp } from '@wazapp/core'
 
-import '@src/styles/index.scss';
+import '@src/styles/index.css';
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   return (
