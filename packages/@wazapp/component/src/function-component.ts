@@ -1,3 +1,5 @@
+import 'mobx-react-lite/batchingForReactDom'
+
 import { FunctionComponent } from 'react';
 import { observer, useAsObservableSource, useStaticRendering } from 'mobx-react-lite';
 
