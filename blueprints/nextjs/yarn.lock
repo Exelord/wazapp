@@ -1129,50 +1129,51 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@wazapp/component@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/component/-/component-0.11.0.tgz#0a658cd3f3214d872c86d9a2a82d32f689cbba10"
-  integrity sha512-vzMLn+Yan4e9nDV6kPhCxGz6Pwbi3YkB8OxHUGnazl63+0OILZxLhHp+2s4AE9A4bN5vq55Py/NJnNYDjPvR/A==
+"@wazapp/component@^0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@wazapp/component/-/component-0.11.4.tgz#5b7a68f97dc250742b3c864bf745d1f5f9a56e94"
+  integrity sha512-X2oetz82DYrkRJLl46JkfuSYZXbAC8wrWtWQMjXnSpv4rLKhYj+jiMNeuYH25v69OVmunS2149WPdHKErEv/0Q==
   dependencies:
-    "@wazapp/core" "^0.11.0"
-    "@wazapp/helpers" "^0.11.0"
-    "@wazapp/utils" "^0.11.0"
+    "@wazapp/core" "^0.11.2"
+    "@wazapp/helpers" "^0.11.4"
+    "@wazapp/utils" "^0.11.2"
+    mobx "^5.15.4"
     mobx-react "^6.2.1"
     mobx-react-lite "^2.0.7"
 
-"@wazapp/core@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/core/-/core-0.11.0.tgz#723054dc6cd67e80e152020dc82f75eace0db37b"
-  integrity sha512-dxdj8oZihyKyUFTvGKWvyPDXScIv/R4ZRyQxoruMZTQuAu47eUOCub5iYcHy9kDlOuUmYThgszm05OlGqfwZFA==
+"@wazapp/core@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/core/-/core-0.11.2.tgz#b0dc1f2555f22d83775600d351349f720634b045"
+  integrity sha512-JaukKURRbH2wiOpBxtUUfioKfSMmxiWq1xjnP2KlsjC3MB475zpPg55F4AoZM9msDkhekB99WzaxwF6yMvgCNA==
   dependencies:
-    "@wazapp/utils" "^0.11.0"
+    "@wazapp/utils" "^0.11.2"
 
-"@wazapp/helpers@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/helpers/-/helpers-0.11.0.tgz#a19044f6b06dc897ab8952e1a374ab86ee89764b"
-  integrity sha512-qF5tnUlPDfdZJUTFgXlPStr/5K/PpYFCz1ntjUvrkI95Fv7M7EL3W3Rbbs+0Ro2zTE4ywG9ivrCJXhUDbcU+bg==
+"@wazapp/helpers@^0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@wazapp/helpers/-/helpers-0.11.4.tgz#af12083cb03ed6f4fe1f431a9d2faca54e269b13"
+  integrity sha512-VmKpvr++E7gDwCVunazl4Ond9nHtDQ3HW6/ipt9jZZpKUu5dI0q6aG6bx6aO2Hhb88R+uY3sRprCn5+ef/bzLg==
   dependencies:
-    "@wazapp/utils" "^0.11.0"
+    "@wazapp/utils" "^0.11.2"
     classnames "^2.2.6"
 
-"@wazapp/service@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/service/-/service-0.11.0.tgz#8da12c2dab10f05b976ec863395556fa467d4836"
-  integrity sha512-Cq6oqa7LUDUKQRVerBSXxIRc86Ip/KGGHLnEa4Eu2lKff3NxQQb4D4GCRgV4KhqgLS7VgvFjA2NXu7En6CpA3w==
+"@wazapp/service@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/service/-/service-0.11.2.tgz#1117d0192917aaeaa998da0624f0ed5fd7c0d97d"
+  integrity sha512-UrBImQrMu8pvhHzvMRBUTAfoOQwwcZOLLedIYgGZP8XO6SdtCUoMawyJdINBQukhKkRuZSgXC82PyAZZKoMvTw==
   dependencies:
-    "@wazapp/core" "^0.11.0"
+    "@wazapp/core" "^0.11.2"
 
-"@wazapp/tracking@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/tracking/-/tracking-0.11.0.tgz#1bb15dbf134cbc170a246873eee81579b30cdf01"
-  integrity sha512-XUu8XEWnCb0x383tJtlBbPHcjP0DYuB5nHTTCOlZz+ieNk8Nl3GToAEW8oTrxiL+OU3NDLMkvcYcRF/+4gC1cA==
+"@wazapp/tracking@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/tracking/-/tracking-0.11.2.tgz#6124918f6cc62583d5c446ec1780da724348dc91"
+  integrity sha512-OWeHqPKxGF4RcKlGAXikjpbjm4CoGuzmABzN1c/z8t0Wer70hKY/UmK03iJvZSlojOKCAHjh4t5Mb7D9Rltvbw==
   dependencies:
     mobx "^5.15.4"
 
-"@wazapp/utils@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/utils/-/utils-0.11.0.tgz#f48d7cb1fe28db8cedb26d49056defdd00e0c044"
-  integrity sha512-F1LAVpkwcoRoY88fzRe/C5qEkqr1EJelMwqqZel4liwvfhOjeVN1+O+Z0wPWSqi0tBuT/D/4kk+I/PwaFotbeQ==
+"@wazapp/utils@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/utils/-/utils-0.11.2.tgz#170cf1cfc0277688640869cdf109baeb680124fb"
+  integrity sha512-SPBNAdSWXxkR5w7zaxbWa8tg1p3X5KryE0a7JXVQ5gtbrDxP5FAAv72SHrKZL0koD9WtCGovqzo3qIwc+bIIiQ==
   dependencies:
     nanoid "^3.1.9"
 
@@ -1732,10 +1733,10 @@ bluebird@^3.5.5:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
-bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.4.0:
-  version "4.11.9"
-  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.9.tgz#26d556829458f9d1e81fc48952493d0ba3507828"
-  integrity sha512-E6QoYqCKZfgatHTdHzs1RRKP7ip4vvm+EyRUeE2RF0NblwVvb0p6jSVeNTOFxPn26QXN2o6SMfNxKp6kU8zQaw==
+bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.11.9:
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
+  integrity sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==
 
 bn.js@^5.1.1:
   version "5.1.2"
@@ -1794,7 +1795,7 @@ braces@^3.0.1, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-brorand@^1.0.1:
+brorand@^1.0.1, brorand@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
@@ -2127,7 +2128,7 @@ chokidar@2.1.8, chokidar@^2.1.8:
   optionalDependencies:
     fsevents "^1.2.7"
 
-"chokidar@>=2.0.0 <4.0.0", chokidar@^3.3.0, chokidar@^3.4.0:
+chokidar@^3.3.0, chokidar@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.0.tgz#b30611423ce376357c765b9b8f904b9fba3c0be8"
   integrity sha512-aXAaho2VJtisB/1fg1+3nlLJqGOuewTzQpd/Tz0yTg2R0e4IGtshYvtjowyEumcBv2z+y4+kc75Mz7j5xJskcQ==
@@ -2965,17 +2966,17 @@ electron-to-chromium@^1.3.413:
   integrity sha512-wnuUfQCBMAdzu5Xe+F4FjaRK+6ToG6WvwG72s8k/3E6b+hoGVYGiQE7JD1NhiCMcqF3+wV+c2vAnaLGRSSWVqA==
 
 elliptic@^6.0.0, elliptic@^6.5.2:
-  version "6.5.3"
-  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.3.tgz#cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6"
-  integrity sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==
+  version "6.5.4"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.4.tgz#da37cebd31e79a1367e941b592ed1fbebd58abbb"
+  integrity sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==
   dependencies:
-    bn.js "^4.4.0"
-    brorand "^1.0.1"
+    bn.js "^4.11.9"
+    brorand "^1.1.0"
     hash.js "^1.0.0"
-    hmac-drbg "^1.0.0"
-    inherits "^2.0.1"
-    minimalistic-assert "^1.0.0"
-    minimalistic-crypto-utils "^1.0.0"
+    hmac-drbg "^1.0.1"
+    inherits "^2.0.4"
+    minimalistic-assert "^1.0.1"
+    minimalistic-crypto-utils "^1.0.1"
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -3881,7 +3882,7 @@ hex-color-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
 
-hmac-drbg@^1.0.0:
+hmac-drbg@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
   integrity sha1-0nRXAQJabHdabFRXk+1QL8DGSaE=
@@ -4878,7 +4879,7 @@ minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
   integrity sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
 
-minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
+minimalistic-crypto-utils@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
@@ -6561,13 +6562,6 @@ sass-loader@8.0.2:
     neo-async "^2.6.1"
     schema-utils "^2.6.1"
     semver "^6.3.0"
-
-sass@^1.26.8:
-  version "1.26.8"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.8.tgz#312652530721f9568d4c4000b0db07ec6eb23325"
-  integrity sha512-yvtzyrKLGiXQu7H12ekXqsfoGT/aTKeMDyVzCB675k1HYuaj0py63i8Uf4SI9CHXj6apDhpfwbUr3gGOjdpu2Q==
-  dependencies:
-    chokidar ">=2.0.0 <4.0.0"
 
 sax@~1.2.4:
   version "1.2.4"
