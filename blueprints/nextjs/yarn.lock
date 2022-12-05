@@ -1129,50 +1129,51 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@wazapp/component@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/component/-/component-0.11.0.tgz#0a658cd3f3214d872c86d9a2a82d32f689cbba10"
-  integrity sha512-vzMLn+Yan4e9nDV6kPhCxGz6Pwbi3YkB8OxHUGnazl63+0OILZxLhHp+2s4AE9A4bN5vq55Py/NJnNYDjPvR/A==
+"@wazapp/component@^0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@wazapp/component/-/component-0.11.4.tgz#5b7a68f97dc250742b3c864bf745d1f5f9a56e94"
+  integrity sha512-X2oetz82DYrkRJLl46JkfuSYZXbAC8wrWtWQMjXnSpv4rLKhYj+jiMNeuYH25v69OVmunS2149WPdHKErEv/0Q==
   dependencies:
-    "@wazapp/core" "^0.11.0"
-    "@wazapp/helpers" "^0.11.0"
-    "@wazapp/utils" "^0.11.0"
+    "@wazapp/core" "^0.11.2"
+    "@wazapp/helpers" "^0.11.4"
+    "@wazapp/utils" "^0.11.2"
+    mobx "^5.15.4"
     mobx-react "^6.2.1"
     mobx-react-lite "^2.0.7"
 
-"@wazapp/core@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/core/-/core-0.11.0.tgz#723054dc6cd67e80e152020dc82f75eace0db37b"
-  integrity sha512-dxdj8oZihyKyUFTvGKWvyPDXScIv/R4ZRyQxoruMZTQuAu47eUOCub5iYcHy9kDlOuUmYThgszm05OlGqfwZFA==
+"@wazapp/core@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/core/-/core-0.11.2.tgz#b0dc1f2555f22d83775600d351349f720634b045"
+  integrity sha512-JaukKURRbH2wiOpBxtUUfioKfSMmxiWq1xjnP2KlsjC3MB475zpPg55F4AoZM9msDkhekB99WzaxwF6yMvgCNA==
   dependencies:
-    "@wazapp/utils" "^0.11.0"
+    "@wazapp/utils" "^0.11.2"
 
-"@wazapp/helpers@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/helpers/-/helpers-0.11.0.tgz#a19044f6b06dc897ab8952e1a374ab86ee89764b"
-  integrity sha512-qF5tnUlPDfdZJUTFgXlPStr/5K/PpYFCz1ntjUvrkI95Fv7M7EL3W3Rbbs+0Ro2zTE4ywG9ivrCJXhUDbcU+bg==
+"@wazapp/helpers@^0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@wazapp/helpers/-/helpers-0.11.4.tgz#af12083cb03ed6f4fe1f431a9d2faca54e269b13"
+  integrity sha512-VmKpvr++E7gDwCVunazl4Ond9nHtDQ3HW6/ipt9jZZpKUu5dI0q6aG6bx6aO2Hhb88R+uY3sRprCn5+ef/bzLg==
   dependencies:
-    "@wazapp/utils" "^0.11.0"
+    "@wazapp/utils" "^0.11.2"
     classnames "^2.2.6"
 
-"@wazapp/service@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/service/-/service-0.11.0.tgz#8da12c2dab10f05b976ec863395556fa467d4836"
-  integrity sha512-Cq6oqa7LUDUKQRVerBSXxIRc86Ip/KGGHLnEa4Eu2lKff3NxQQb4D4GCRgV4KhqgLS7VgvFjA2NXu7En6CpA3w==
+"@wazapp/service@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/service/-/service-0.11.2.tgz#1117d0192917aaeaa998da0624f0ed5fd7c0d97d"
+  integrity sha512-UrBImQrMu8pvhHzvMRBUTAfoOQwwcZOLLedIYgGZP8XO6SdtCUoMawyJdINBQukhKkRuZSgXC82PyAZZKoMvTw==
   dependencies:
-    "@wazapp/core" "^0.11.0"
+    "@wazapp/core" "^0.11.2"
 
-"@wazapp/tracking@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/tracking/-/tracking-0.11.0.tgz#1bb15dbf134cbc170a246873eee81579b30cdf01"
-  integrity sha512-XUu8XEWnCb0x383tJtlBbPHcjP0DYuB5nHTTCOlZz+ieNk8Nl3GToAEW8oTrxiL+OU3NDLMkvcYcRF/+4gC1cA==
+"@wazapp/tracking@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/tracking/-/tracking-0.11.2.tgz#6124918f6cc62583d5c446ec1780da724348dc91"
+  integrity sha512-OWeHqPKxGF4RcKlGAXikjpbjm4CoGuzmABzN1c/z8t0Wer70hKY/UmK03iJvZSlojOKCAHjh4t5Mb7D9Rltvbw==
   dependencies:
     mobx "^5.15.4"
 
-"@wazapp/utils@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@wazapp/utils/-/utils-0.11.0.tgz#f48d7cb1fe28db8cedb26d49056defdd00e0c044"
-  integrity sha512-F1LAVpkwcoRoY88fzRe/C5qEkqr1EJelMwqqZel4liwvfhOjeVN1+O+Z0wPWSqi0tBuT/D/4kk+I/PwaFotbeQ==
+"@wazapp/utils@^0.11.2":
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/@wazapp/utils/-/utils-0.11.2.tgz#170cf1cfc0277688640869cdf109baeb680124fb"
+  integrity sha512-SPBNAdSWXxkR5w7zaxbWa8tg1p3X5KryE0a7JXVQ5gtbrDxP5FAAv72SHrKZL0koD9WtCGovqzo3qIwc+bIIiQ==
   dependencies:
     nanoid "^3.1.9"
 
@@ -2127,7 +2128,7 @@ chokidar@2.1.8, chokidar@^2.1.8:
   optionalDependencies:
     fsevents "^1.2.7"
 
-"chokidar@>=2.0.0 <4.0.0", chokidar@^3.3.0, chokidar@^3.4.0:
+chokidar@^3.3.0, chokidar@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.0.tgz#b30611423ce376357c765b9b8f904b9fba3c0be8"
   integrity sha512-aXAaho2VJtisB/1fg1+3nlLJqGOuewTzQpd/Tz0yTg2R0e4IGtshYvtjowyEumcBv2z+y4+kc75Mz7j5xJskcQ==
@@ -2705,9 +2706,9 @@ decamelize@^1.1.2:
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 decompress-response@^3.2.0, decompress-response@^3.3.0:
   version "3.3.0"
@@ -6561,13 +6562,6 @@ sass-loader@8.0.2:
     neo-async "^2.6.1"
     schema-utils "^2.6.1"
     semver "^6.3.0"
-
-sass@^1.26.8:
-  version "1.26.8"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.8.tgz#312652530721f9568d4c4000b0db07ec6eb23325"
-  integrity sha512-yvtzyrKLGiXQu7H12ekXqsfoGT/aTKeMDyVzCB675k1HYuaj0py63i8Uf4SI9CHXj6apDhpfwbUr3gGOjdpu2Q==
-  dependencies:
-    chokidar ">=2.0.0 <4.0.0"
 
 sax@~1.2.4:
   version "1.2.4"
